@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
+  overflow-x: hidden;
+}
+
+.TapHighlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.HeaderContainer {
+  @apply flex relative justify-between items-center px-5 md:px-10 xl:px-28 h-[100px] z-50;
+}
+
+.HamburgerMenuContainer {
+  @apply w-5 flex flex-col justify-center gap-[7px] lg:hidden TapHighlight;
+}
+
+.HamburgerMenuItems {
+  @apply w-full h-[2px] bg-dark;
+}
+
+.ProfileImage {
+  @apply w-[42px] h-[42px] rounded-[50%] bg-gray-400 flex items-center justify-center;
+}
+
+.ProfileSearchInput {
+  @apply hidden xl:block w-56 bg-gray-100 rounded-tr-[50px] rounded-br-[50px] pr-5 outline-none placeholder:text-sm placeholder:text-gray-500 text-dark text-sm;
+}
+
+.ProfileSearchIconBtn {
+  @apply xl:bg-gray-100 xl:pl-5 xl:pr-3 py-[14px] rounded-tl-[50px] rounded-bl-[50px] TapHighlight;
+}
+
+.ProfileSearchIcon {
+  @apply text-dark xl:text-gray-500 text-[1.4rem] xl:text-lg;
+}
+
+.Overlay {
+  @apply fixed top-0 left-0 h-screen w-full bg-black/30  lg:hidden z-40;
+}
+
+.sectionWrapper {
+  @apply max-w-7xl flex items-center gap-8;
+}
+
+.buttonConfig {
+  @apply mt-5 text-center w-40 text-white rounded-[2rem] font-medium tracking-wide  py-4 hover:opacity-90 active:opacity-80 duration-100;
+}
+
+.btnConfig2 {
+  @apply text-white rounded-[2rem] font-medium tracking-wide lg:px-5 py-[10px] px-4  hover:opacity-90 active:opacity-80 duration-100;
+}
+
+/* Logo animation for intro slider  */
+.logoSlide {
+  animation: logoSlide 60s infinite linear;
+}
+
+@keyframes logoSlide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
