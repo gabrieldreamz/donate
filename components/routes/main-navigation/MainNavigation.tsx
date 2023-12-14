@@ -1,26 +1,25 @@
-import Logo from "./Logo";
-import Navlinks from "./navlinks/navlinks";
-import Profile from "./profile/Profile";
-import HamburgerMenu from "./navlinks/HamburgerMenu";
-export default function MainNavigation({
-  toggleMenu,
-  setToggleMenu,
-}: {
-  toggleMenu: boolean;
-  setToggleMenu: Function;
-}) {
+"use client";
+
+import { AnimatePresence } from "framer-motion";
+import DropDownMenu from "./navlinks/DropDownMenu";
+import LinksWrapper from "./LinksWrapper";
+import { useState } from "react";
+
+export default function MainNavigation() {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
-    <section
-      className={`HeaderContainer ${
-        toggleMenu ? "bg-white" : "bg-transparent"
-      }`}
-    >
-      <Navlinks />
-      <div className="flex items-center gap-5 lg:order-1">
-        <HamburgerMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-        <Logo />
+    <section>
+      <LinksWrapper toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
+      {/* DropDown */}
+      <div className="lg:hidden">
+        {toggleMenu && (
+          <div className="Overlay" onClick={() => setToggleMenu(false)} />
+        )}
+        <AnimatePresence>
+          {toggleMenu && <DropDownMenu setToggleMenu={setToggleMenu} />}
+        </AnimatePresence>
       </div>
-      <Profile />
     </section>
   );
 }
