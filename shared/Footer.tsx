@@ -3,7 +3,6 @@ import Link from "next/link";
 import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
-import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneVolume } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 
@@ -11,24 +10,26 @@ export default function Footer() {
   return (
     <section className="bg-gray-200 flex flex-col lg:flex-row gap-10 lg:gap-32 px-5 p-7 justify-center">
       <div className="flex flex-col gap-3">
-        <p className="font-medium lg:font-semibold text-lg  text-blue-500 ">
-          ForThePpl
-        </p>
+        <Link href="/">
+          <p className="font-medium lg:font-semibold text-lg  text-blue-500 ">
+            ForThePpl
+          </p>
+        </Link>
         <p className="max-w-sm text-sm font-medium text-dark/80">
           Help others by using fortheppl, a platform that is safe, transparent
           and trusted
         </p>
         <Link
-          className="text-sm font-medium text-dark/80"
+          className="text-sm font-medium text-dark/80 hover:underline flex items-center gap-2"
           href="mailto:support@fortheppl.com"
         >
-          support@fortheppl.com
+          <MdMail size={18} /> support@fortheppl.com
         </Link>
         <Link
-          className="text-sm font-medium text-dark/80"
+          className="text-sm font-medium text-dark/80 hover:underline flex items-center gap-2"
           href="tel:08061695391"
         >
-          08061695391
+          <FaPhoneVolume size={18} /> 08061695391
         </Link>
 
         <ul className="flex items-center gap-3 mt-5">

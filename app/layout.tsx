@@ -3,7 +3,6 @@ import "@styles/globals.css";
 
 import localFont from "next/font/local";
 import Footer from "@shared/Footer";
-import Head from "next/head";
 const MonaSans = localFont({ src: "../public/fonts/Mona-Sans.woff2" });
 
 export const metadata: Metadata = {
