@@ -18,11 +18,11 @@ export default function HamburgerMenu({ toggleMenu, setToggleMenu }: Menu) {
           onClick={() => setToggleMenu(false)}
         >
           <motion.span
-            animate={{ rotate: 45 }}
+            animate={{ translateY: "5px", rotate: 45 }}
             className="HamburgerMenuItems"
           ></motion.span>
           <motion.span
-            animate={{ rotate: -45 }}
+            animate={{ translateY: "-5px", rotate: -45 }}
             className="HamburgerMenuItems"
           ></motion.span>
         </div>
@@ -31,11 +31,8 @@ export default function HamburgerMenu({ toggleMenu, setToggleMenu }: Menu) {
           className="HamburgerMenuContainer"
           onClick={() => setToggleMenu(true)}
         >
-          <motion.span
-            transition={animationData.transition}
-            className="HamburgerMenuItems"
-          ></motion.span>
-          <span className="w-[60%] h-[2px] bg-dark"></span>
+          <motion.span className="HamburgerMenuItems"></motion.span>
+          <motion.span className="w-[60%] h-[2px] bg-dark"></motion.span>
         </div>
       )}
     </>

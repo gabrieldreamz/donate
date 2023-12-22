@@ -1,0 +1,1 @@
+background: linear-gradient(90deg,rgba(0,28,57,.95) 33%,rgba(0,28,57,.5) 82%,rgba(0,28,57,0))}

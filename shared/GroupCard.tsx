@@ -1,7 +1,7 @@
 import { FaBookmark } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 
-export default function CategoryCard() {
+export default function GroupCard() {
   return (
     <div className="flex items-center justify-between pt-3">
       <div className="flex items-center gap-2 ">

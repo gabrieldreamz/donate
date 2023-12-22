@@ -36,7 +36,7 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
           exit={{ translateX: -30, opacity: 0.7 }}
         >
           <Link
-            className="tracking-wide text-dark TapHighlight"
+            className="tracking-wide text-dark TapHighlight block"
             href={item.link}
             onClick={() => setToggleMenu(false)}
           >
