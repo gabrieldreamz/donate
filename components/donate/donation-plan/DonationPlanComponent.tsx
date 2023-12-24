@@ -12,7 +12,7 @@ const CardData = [
     ],
     description:
       "There is no such thing as a small contribution! every contribution count! When you make a one-time donation to Global Ahead, we make sure to securely assign your donation to a project within our organization with the most urgent need. Effectively, your donation reflects on medical and school supplies, equipment and machinery to construction sites in places of vulnerability.",
-    link: "",
+    link: "/donate/donation",
     btnTxt: "Donate once",
     btnColor: "green",
   },
@@ -25,7 +25,7 @@ const CardData = [
     ],
     description:
       "More than a well-executed project, we want to see permanent benefits impacting where your donation reaches. Your monthly support is an investment in the projects that are currently being developed and the possibility of expanding our operation to support even more people around the world.",
-    link: "",
+    link: "/donate/donation",
     btnTxt: "Donate monthly",
     btnColor: "blue",
   },
@@ -39,7 +39,7 @@ const CardData = [
     description:
       "More than a well-executed project, we want to see permanent benefits impacting where your donation reaches. Your monthly support is an investment in the projects that are currently being developed and the possibility of expanding our operation to support even more people around the world.",
 
-    link: "",
+    link: "/donate/donation",
     btnTxt: "Donate annualy",
     btnColor: "red",
   },

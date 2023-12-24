@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#fff" />
       </head>
-      <body>
+      <body className="TapHighlight">
         <MainNavigation />
         {children}
         <Footer />

@@ -33,15 +33,16 @@ export default function DonationPlanCard({
       </ul>
       <hr className="border border-purple-100" />
       <Description description={description} />
-      <button
+      <Link
+        href={link}
         className={`text-center ${btnColor === "red" && "bg-red-500"} ${
           btnColor === "green" && "bg-green-500"
         } ${
           btnColor === "blue" && "bg-blue-500"
         } md:w-56 md:mx-auto text-white rounded-[2rem] font-medium tracking-wide  py-3 hover:opacity-90 active:opacity-80 duration-100`}
       >
-        <Link href={link}>{btnTxt}</Link>
-      </button>
+        <button>{btnTxt}</button>
+      </Link>
     </div>
   );
 }

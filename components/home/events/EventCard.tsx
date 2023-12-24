@@ -27,13 +27,13 @@ export default function EventCard({
   return (
     <div className="w-96 md:w-80 bg-white rounded-xl  overflow-hidden">
       <div className="h-56 md:h-44 bg-slate-300 overflow-hidden flex items-start justify-center">
-        <Image src={img} alt="" />
+        <Image src={img} alt={title} />
       </div>
 
       <div className="p-3 rounded-xl flex flex-col gap-3">
         <div className="flex justify-between items-center">
           <div className="flex gap-1 items-center text-blue-500">
-            <MdOutlineBookmark className="text-blue text-lg " />{" "}
+            <MdOutlineBookmark className="text-blue text-lg " />
             <p className="text-sm font-medium ">{categorie}</p>
           </div>
           <div className="flex gap-1 items-center text-yellow-500">
@@ -46,8 +46,12 @@ export default function EventCard({
 
         <div>
           <p className="font-medium text-sm text-dark/75 tracking-wide">
-            <span className="text-dark">${transFundsRaised}k</span> raised of $
-            {transTotalFunds}k
+            <span className="text-dark">
+              ${transFundsRaised}
+              {fundsRaised > 999 ? "k" : ""}
+            </span>{" "}
+            raised of ${transTotalFunds}
+            {totalFunds > 999 ? "k" : ""}
           </p>
           <div className="w-full h-2 bg-gray-200 rounded-[2rem] mt-2"></div>
         </div>
