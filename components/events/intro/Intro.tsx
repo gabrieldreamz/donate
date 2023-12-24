@@ -13,7 +13,7 @@ export default function Intro() {
               The need for medical attention
             </h1>
             <p className="max-w-xs md:max-w-3xl text-sm md:text-base">
-              God talks about giving to the poor, so let's embrace that
+              God talks about giving to the poor, so let&apos;s embrace that
             </p>
           </div>
         </div>

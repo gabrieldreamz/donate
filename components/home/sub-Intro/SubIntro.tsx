@@ -10,7 +10,7 @@ export default function SubIntro() {
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 2xl:gap-36 mb-28 lg:mb-44 ">
         <div className="flex flex-col gap-7 items-center justify-center lg:items-start px-5">
           <h1 className="text-3xl lg:text-6xl lg:max-w-xs text-dark mt-24 lg:mt-0">
-            What's Happening New
+            What&apos;s Happening New
           </h1>
           <p className="text-dark/80 font-medium max-w-md text-center lg:text-start">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
