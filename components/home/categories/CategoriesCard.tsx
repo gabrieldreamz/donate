@@ -19,7 +19,12 @@ export default function CategoriesCard({
     >
       <div className="flex sm:flex-col gap-3 items-center">
         <div
-          className={`h-10 w-10 sm:w-16 sm:h-16 rounded-[50%] bg-${color}-200 flex items-center justify-center`}
+          className={`h-10 w-10 sm:w-16 sm:h-16 rounded-[50%] flex items-center justify-center 
+          ${color === "green" && "bg-green-200"}
+          ${color === "red" && "bg-red-200"}
+          ${color === "blue" && "bg-blue-200"}
+          ${color === "purple" && "bg-purple-200"}
+          `}
         >
           <Image src={image} alt={title} className="w-6 sm:w-8" />
         </div>

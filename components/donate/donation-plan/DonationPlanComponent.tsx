@@ -1,3 +1,4 @@
+import Volunteer from "@components/volunteer/Volunteer";
 import DonationPlanCard from "./DonationPlanCard";
 import DonationPlanIntro from "./DonationPlanIntro";
 
@@ -46,12 +47,12 @@ const CardData = [
 
 export default function DonationPlanComponent() {
   return (
-    <section className="flex items-center my-5  md:my-16 flex-col">
+    <section className="flex items-center my-5 md:my-16 flex-col">
       <DonationPlanIntro />
       <p className="mt-20 text-2xl lg:text-3xl text-blue-500 font-medium">
         Select a Donation plan
       </p>
-      <div className="flex flex-col md:flex-row flex-wrap gap-14 lg:gap-7 mt-16 md:mt-20 mb-20 justify-center">
+      <div className="flex flex-col md:flex-row flex-wrap gap-14 lg:gap-7 mt-16 md:mt-20 mb-32 justify-center">
         {CardData.map((card) => (
           <DonationPlanCard
             key={card.title}
@@ -64,6 +65,7 @@ export default function DonationPlanComponent() {
           />
         ))}
       </div>
+      <Volunteer />
     </section>
   );
 }
