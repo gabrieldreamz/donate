@@ -1,12 +1,5 @@
-import Intro from "@components/events/intro/Intro";
-import LatestEvents from "@components/events/lastest-events/LatestEvents";
-import React from "react";
+import EventsComponent from "@components/events/EventsComponent";
 
 export default function Events() {
-  return (
-    <main>
-      <Intro />
-      <LatestEvents />
-    </main>
-  );
+  return <EventsComponent />;
 }
