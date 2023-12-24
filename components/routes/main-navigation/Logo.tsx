@@ -1,7 +1,11 @@
+import Link from "next/link";
+
 export default function Logo() {
   return (
-    <p className="font-medium lg:font-semibold text-lg  text-black ">
-      ForThePpl
-    </p>
+    <Link href="/" className="TapHighlight">
+      <p className="font-medium lg:font-semibold text-lg  text-black ">
+        ForThePpl
+      </p>
+    </Link>
   );
 }
