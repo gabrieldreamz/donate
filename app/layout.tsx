@@ -2,13 +2,11 @@ import type { Metadata, Viewport } from "next";
 import "@styles/globals.css";
 
 import localFont from "next/font/local";
-import Footer from "@shared/Footer";
-import MainNavigation from "@components/routes/main-navigation/MainNavigation";
 const MonaSans = localFont({ src: "../public/fonts/Mona-Sans.woff2" });
 
 export const metadata: Metadata = {
   title: "ForThePeople",
-  description: "Donate to support the needy",
+  description: "Donate to support the less poor",
 };
 
 export default function RootLayout({
@@ -21,11 +19,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#fff" />
       </head>
-      <body className="TapHighlight">
-        <MainNavigation />
-        {children}
-        <Footer />
-      </body>
+      <body className="TapHighlight">{children}</body>
     </html>
   );
 }
