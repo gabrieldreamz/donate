@@ -9,7 +9,7 @@ export default function Options() {
           </p>
         </div>
         <p className="text-sm ml-6 text-gray-500">
-          Your details won't be stored
+          Your details won&apos;t be stored
         </p>
       </div>
 
