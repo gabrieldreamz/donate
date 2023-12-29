@@ -27,67 +27,167 @@ export default function CarouselSlider() {
     <div className="whitespace-nowrap flex w-full my-20">
       <div className="logoSlide">
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img1} alt="img" className="object-cover h-full" />
+          <Image
+            src={img1}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img2} alt="img" className="object-cover h-full" />
+          <Image
+            src={img2}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img3} alt="img" className="object-cover h-full" />
+          <Image
+            src={img3}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img4} alt="img" className="object-cover h-full" />
+          <Image
+            src={img4}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img5} alt="img" className="object-cover h-full" />
+          <Image
+            src={img5}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img6} alt="img" className="object-cover h-full" />
+          <Image
+            src={img6}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img7} alt="img" className="object-cover h-full" />
+          <Image
+            src={img7}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img8} alt="img" className="object-cover h-full" />
+          <Image
+            src={img8}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img9} alt="img" className="object-cover h-full" />
+          <Image
+            src={img9}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img10} alt="img" className="object-cover h-full" />
+          <Image
+            src={img10}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
       </div>
 
       <div className="logoSlide">
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img1} alt="img" className="object-cover h-full" />
+          <Image
+            src={img1}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img2} alt="img" className="object-cover h-full" />
+          <Image
+            src={img2}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img3} alt="img" className="object-cover h-full" />
+          <Image
+            src={img3}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img4} alt="img" className="object-cover h-full" />
+          <Image
+            src={img4}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img5} alt="img" className="object-cover h-full" />
+          <Image
+            src={img5}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img6} alt="img" className="object-cover h-full" />
+          <Image
+            src={img6}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img7} alt="img" className="object-cover h-full" />
+          <Image
+            src={img7}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img8} alt="img" className="object-cover h-full" />
+          <Image
+            src={img8}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img9} alt="img" className="object-cover h-full" />
+          <Image
+            src={img9}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
         <div className="w-56 h-64 rounded-3xl overflow-hidden inline-block mx-3">
-          <Image src={img10} alt="img" className="object-cover h-full" />
+          <Image
+            src={img10}
+            alt="img"
+            className="object-cover h-full"
+            priority
+          />
         </div>
       </div>
     </div>
