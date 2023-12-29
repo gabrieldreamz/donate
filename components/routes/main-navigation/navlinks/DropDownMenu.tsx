@@ -52,7 +52,7 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
         className="tracking-wide text-dark TapHighlight"
         onClick={() => setToggleMenu(false)}
       >
-        Log in
+        Volunteer
       </motion.li>
     </motion.ul>
   );

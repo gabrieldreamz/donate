@@ -2,7 +2,7 @@ import CenterCard from "@shared/CenterCard";
 import Link from "next/link";
 import Image from "next/image";
 
-import test from "@public/assets/images/drew.png";
+import test from "@public/assets/images/intro-2 (1).png";
 
 export default function SubIntro() {
   return (
