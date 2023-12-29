@@ -2,9 +2,9 @@ import CenterCard from "@shared/CenterCard";
 
 export default function Trust() {
   return (
-    <section className="bg-dark w-full px-5 py-12 lg:px-8">
+    <section className="bg-dark w-full px-5 py-12 md:py-20 lg:px-8">
       <CenterCard>
-        <h1 className="text-2xl lg:text-3xl text-center text-white">
+        <h1 className="text-2xl lg:text-4xl max-w-sm mx-auto text-center text-white">
           Trusted by Thousands of Volunters
         </h1>
 
