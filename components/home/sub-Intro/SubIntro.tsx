@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import test from "@public/assets/images/intro-2 (1).png";
+import give from "@public/assets/icons/give-love.png";
 
 export default function SubIntro() {
   return (
@@ -21,13 +22,20 @@ export default function SubIntro() {
             Join us
           </Link>
         </div>
-        <div className="px-3 lg:px-0 mt-8 lg:mt-0 flex items-center justify-center">
+        <div className="px-3 lg:px-0 mt-8 lg:mt-0 flex items-center justify-center relative">
           <Image
             width={500}
             height={500}
             className="lg:w-[400px] 2xl:w-[500px]"
             src={test}
             alt="selfish shiiiii"
+          />
+          <Image
+            src={give}
+            alt=""
+            width={44}
+            height={44}
+            className="absolute right-[20%] top-0"
           />
         </div>
       </div>
