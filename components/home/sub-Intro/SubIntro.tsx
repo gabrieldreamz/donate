@@ -21,7 +21,7 @@ export default function SubIntro() {
             Join us
           </Link>
         </div>
-        <div className="px-3 lg:px-0 mt-8 lg:mt-0">
+        <div className="px-3 lg:px-0 mt-8 lg:mt-0 flex items-center justify-center">
           <Image
             width={500}
             height={500}
