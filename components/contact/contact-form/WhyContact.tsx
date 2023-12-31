@@ -2,7 +2,7 @@ export default function WhyContact() {
   return (
     <div className="flex flex-col gap-2">
       <label htmlFor="details" className="text-lg text-dark font-medium">
-        We'd love to hear from you
+        We&apos;d love to hear from you
       </label>
       <input
         type="text"
