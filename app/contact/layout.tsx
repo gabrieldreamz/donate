@@ -10,7 +10,6 @@ export default function EventsLayout({
     <div>
       <MainNavigation />
       {children}
-      <Footer />
     </div>
   );
 }
