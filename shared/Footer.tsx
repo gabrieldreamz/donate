@@ -33,26 +33,26 @@ export default function Footer() {
         </Link>
 
         <ul className="flex items-center gap-3 mt-5">
-          <li className="p-2 border border-slate-500 rounded-[50%]">
+          <li className="p-[6px] border border-dark rounded-[50%]">
             <Link href="https://web.facebook.com/">
-              <FaSquareFacebook className="text-xl text-slate-500" />
+              <FaSquareFacebook className="text-lg text-dark" />
             </Link>
           </li>
-          <li className="p-2 border border-slate-500 rounded-[50%]">
+          <li className="p-[6px] border border-dark rounded-[50%]">
             <Link href="https://twitter.com/">
-              <FaTwitterSquare className="text-xl text-slate-500" />
+              <FaTwitterSquare className="text-lg text-dark" />
             </Link>
           </li>
-          <li className="p-2 border border-slate-500 rounded-[50%]">
+          <li className="p-[6px] border border-dark rounded-[50%]">
             <Link href="https://www.linkedin.com/">
-              <IoLogoLinkedin className="text-xl text-slate-500" />
+              <IoLogoLinkedin className="text-lg text-dark" />
             </Link>
           </li>
-          <li className="p-2 border border-slate-500 rounded-[50%]">
+          <li className="p-[6px] border border-dark rounded-[50%]">
             <Link href="https://www.instagram.com/">
-              <IoLogoInstagram className="text-xl text-slate-500" />
+              <IoLogoInstagram className="text-lg text-dark" />
             </Link>
-          </li>
+          </li>{" "}
         </ul>
       </div>
 
