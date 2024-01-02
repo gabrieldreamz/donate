@@ -35,7 +35,7 @@ export default function HeroArticle() {
               voluptatibus
             </p>
           </div>
-          <MdOutlineArrowOutward />
+          <MdOutlineArrowOutward className="text-xl" />
         </div>
       </div>
     </section>
