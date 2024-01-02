@@ -65,6 +65,22 @@ body {
   background-image: url("../public/assets/images/craig-philbrick-kfxPVP_7P7U-unsplash.jpg");
 }
 
+/* Text clamping */
+.TxtClamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* Number of lines to show before ellipsis */
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 765px) {
+  .TxtClamp {
+    -webkit-line-clamp: 1;
+  }
+}
+/* //////////////////////////////////////////////////////////////// */
+
 /* Logo animation for intro slider  */
 .logoSlide {
   animation: logoSlide 60s infinite linear;
