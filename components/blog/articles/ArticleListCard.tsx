@@ -40,7 +40,7 @@ export default function ArticlesListCard({
           <h1 className="text-lg mob:text-xl lg:text-2xl  font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-xl">
             {title}
           </h1>
-          <p className="text-sm mob:text-base text-dark/80 font-medium TxtClamp max-w-[300px] md:max-w-xl">
+          <p className="text-sm mob:text-base text-dark/80 TxtClamp max-w-[300px] md:max-w-xl">
             {description}
           </p>
         </div>
