@@ -21,7 +21,7 @@ export default function HeroArticleCard({
 }: ArticleCard) {
   return (
     <CenterCard>
-      <div className="w-[95%] lg:w-[80%] h-96 md:h-[550px] rounded-3xl overflow-hidden relative mx-auto">
+      <div className="w-[90%] lg:w-[80%] h-80 md:h-[550px] rounded-xl overflow-hidden relative mx-auto">
         <Image src={img} alt={title} />
         {/* Info overay */}
         <div className="absolute w-full h-20 md:h-24 bg-gray-700/70  bottom-0 border-t border-gray-500 flex items-center">

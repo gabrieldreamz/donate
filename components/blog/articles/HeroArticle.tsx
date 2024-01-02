@@ -3,7 +3,7 @@ import HeroArticleCard from "./HeroArticleCard";
 
 export default function HeroArticle() {
   return (
-    <section className="mt-20 mb-10 sm:mt-32 flex justify-center">
+    <section className="mt-20 lg:mb-10 sm:mt-32 flex justify-center">
       <HeroArticleCard
         img={img}
         title="The need for medical attention"

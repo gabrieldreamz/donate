@@ -19,8 +19,8 @@ export default function ArticlesListCard({
   description,
 }: ArticleCard) {
   return (
-    <div className="w-[95%] lg:max-w-[480px] mx-auto lg:mx-0 mt-20 lg:mt-10">
-      <div className="h-96 md:h-80 rounded overflow-hidden relative mx-auto">
+    <div className="w-[90%] lg:max-w-[480px] mx-auto lg:mx-0 mt-24 lg:mt-10">
+      <div className="h-80 sm:h-96 lg:h-80 rounded-xl overflow-hidden relative mx-auto">
         <Image src={img} alt={title} />
         {/* Info overay */}
         <div className="absolute w-full h-20 md:h-24 bg-gray-700/70  bottom-0 border-t border-gray-500 flex items-center">
