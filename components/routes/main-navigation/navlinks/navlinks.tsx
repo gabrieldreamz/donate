@@ -11,6 +11,11 @@ export default function Navlinks() {
           </Link>
         </li>
       ))}
+      <li>
+        <Link href="/blog" className="hover:opacity-95  tracking-wide">
+          Blog
+        </Link>
+      </li>
     </ul>
   );
 }

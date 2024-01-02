@@ -45,15 +45,17 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
         </motion.li>
       ))}
       <hr className="w-full" />
-      <motion.li
-        initial={animationData(null).initial}
-        animate={animationData(null).animate}
-        exit={{ translateX: -20, opacity: 0.7 }}
-        className="tracking-wide text-dark TapHighlight"
-        onClick={() => setToggleMenu(false)}
-      >
-        Volunteer
-      </motion.li>
+      <Link href="/blog">
+        <motion.li
+          initial={animationData(null).initial}
+          animate={animationData(null).animate}
+          exit={{ translateX: -20, opacity: 0.7 }}
+          className="tracking-wide text-dark TapHighlight"
+          onClick={() => setToggleMenu(false)}
+        >
+          Blog
+        </motion.li>
+      </Link>
     </motion.ul>
   );
 }

@@ -5,7 +5,7 @@ import intro from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplas
 export default function Reviews() {
   return (
     <div className="grid gap-10">
-      <div className="lg:w-[500px] h-96 overflow-hidden lg:rounded-2xl">
+      <div className="w-[90%] lg:w-[500px] h-96 overflow-hidden rounded-2xl mx-auto lg:mx-0">
         <Image src={intro} alt="A very cute girl" />
       </div>
 
