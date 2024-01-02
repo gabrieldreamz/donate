@@ -45,7 +45,7 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
         </motion.li>
       ))}
       <hr className="w-full" />
-      <Link href="/blog">
+      <Link href="#">
         <motion.li
           initial={animationData(null).initial}
           animate={animationData(null).animate}
@@ -53,7 +53,7 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
           className="tracking-wide text-dark TapHighlight"
           onClick={() => setToggleMenu(false)}
         >
-          Blog
+          Volunteer
         </motion.li>
       </Link>
     </motion.ul>

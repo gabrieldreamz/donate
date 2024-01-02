@@ -12,8 +12,8 @@ export default function Navlinks() {
         </li>
       ))}
       <li>
-        <Link href="/blog" className="hover:opacity-95  tracking-wide">
-          Blog
+        <Link href="#" className="hover:opacity-95  tracking-wide">
+          Volunteer
         </Link>
       </li>
     </ul>

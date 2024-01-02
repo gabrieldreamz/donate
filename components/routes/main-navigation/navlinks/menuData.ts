@@ -1,6 +1,6 @@
 export const linkData = [
   { link: "/", text: "Home" },
-  { link: "/contact", text: "Contact" },
+  { link: "/blog", text: "Blog" },
   { link: "/about", text: "About us" },
-  { link: "#", text: "Volunteer" },
+  { link: "/contact", text: "Contact" },
 ];
