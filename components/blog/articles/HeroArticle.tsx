@@ -27,10 +27,10 @@ export default function HeroArticle() {
             <span className="text-sm text-green-500 font-medium">
               1 Jan 2020
             </span>
-            <h1 className="text-2xl md:text-3xl font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-xl">
+            <h1 className="text-lg mob:text-2xl md:text-3xl font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-xl">
               The need for medical attention
             </h1>
-            <p className="text-dark/80 font-medium TxtClamp max-w-[300px] md:max-w-xl">
+            <p className="text-sm mob:text-base text-dark/80 font-medium TxtClamp max-w-[300px] md:max-w-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
               voluptatibus
             </p>
