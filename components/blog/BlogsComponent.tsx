@@ -1,7 +1,7 @@
 import Volunteer from "@components/volunteer/Volunteer";
 import Intro from "./Intro";
-import ArticleList from "./articles/ArticleList";
-import HeroArticle from "./articles/HeroArticle";
+import ArticleList from "./home-articles/ArticleList";
+import HeroArticle from "./home-articles/HeroArticle";
 
 export default function BlogsComponent() {
   return (

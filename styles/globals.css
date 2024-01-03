@@ -83,7 +83,7 @@ body {
 
 /* Logo animation for intro slider  */
 .logoSlide {
-  animation: logoSlide 60s infinite linear;
+  animation: logoSlide 80s infinite linear;
 }
 
 @keyframes logoSlide {

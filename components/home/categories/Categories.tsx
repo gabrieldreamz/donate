@@ -46,7 +46,7 @@ const CategoriesData: {
 export default function Categories() {
   return (
     <CenterCard>
-      <section className="lg:mb-32 lg:mt-16">
+      <section className="mb-7 lg:mb-44 mt-12 md:mt-20">
         <div className="mx-auto text-center text-3xl lg:text-4xl max-w-xs sm:max-w-full text-dark">
           <h1>Support the less poor by Donating today</h1>
         </div>
