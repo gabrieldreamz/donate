@@ -17,10 +17,10 @@ export default function HowItStarted() {
         bounds, and where the spirit of giving transcends borders. Driven by a
         commitment to address pressing social issues, Fortheppl channels its
         efforts into projects that empower individuals, uplift communities, and
-        contribute to sustainable development. Whether it's providing access to
-        education, healthcare, or vital resources, our initiatives are designed
-        to create a ripple effect of positive change. Join Fortheppl on this
-        transformative journey as we work towards a future where generosity
+        contribute to sustainable development. Whether it&apos;s providing
+        access to education, healthcare, or vital resources, our initiatives are
+        designed to create a ripple effect of positive change. Join Fortheppl on
+        this transformative journey as we work towards a future where generosity
         becomes a universal language
       </p>
     </div>
