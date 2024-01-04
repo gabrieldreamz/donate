@@ -11,28 +11,28 @@ export default function Trust() {
         <div className="flex  items-center justify-center gap-6 lg:gap-44 mt-14 flex-wrap">
           <div className="flex lg:flex-col items-center gap-2">
             <h1 className="text-xl sm:text-2xl tracking-wide lg:text-4xl text-blue-500 font-medium">
-              38k
+              180
             </h1>
             <p className="font-medium text-sm text-white">Volunteers</p>
           </div>
 
           <div className="flex lg:flex-col items-center gap-2">
             <h1 className="text-xl sm:text-2xl tracking-wide lg:text-4xl text-blue-500 font-medium">
-              470k
+              32k
             </h1>
             <p className="font-medium text-sm text-white">Donations</p>
           </div>
 
           <div className="flex lg:flex-col items-center gap-2 sm:hidden">
             <h1 className="text-xl sm:text-2xl tracking-wide lg:text-4xl text-blue-500 font-medium">
-              25k
+              15
             </h1>
             <p className="font-medium text-sm text-white">Collaborators</p>
           </div>
 
           <div className="flex lg:flex-col items-center gap-2">
             <h1 className="text-xl sm:text-2xl tracking-wide lg:text-4xl text-blue-500 font-medium">
-              100+
+              180+
             </h1>
             <p className="font-medium text-sm text-white">Successful Events</p>
           </div>

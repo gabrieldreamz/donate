@@ -11,22 +11,22 @@ export default function Reviews() {
 
       <div className="p-5 sm:bg-white rounded-2xl grid sm:grid-cols-2 gap-5">
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">
-          <span className="text-xl md:text-2xl font-medium">10</span>
+          <span className="text-xl md:text-2xl font-medium">2.5</span>
           <p className="text-sm text-dark/80">Years Experience</p>
         </div>
 
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">
-          <span className="text-xl md:text-2xl font-medium">180K</span>
+          <span className="text-xl md:text-2xl font-medium">180</span>
           <p className="text-sm text-dark/80">Projects</p>
         </div>
 
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">
-          <span className="text-xl md:text-2xl font-medium">240</span>
+          <span className="text-xl md:text-2xl font-medium">120</span>
           <p className="text-sm text-dark/80">volunteers</p>
         </div>
 
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">
-          <span className="text-xl md:text-2xl font-medium">58+</span>
+          <span className="text-xl md:text-2xl font-medium">32+</span>
           <p className="text-sm text-dark/80">Workers</p>
         </div>
       </div>

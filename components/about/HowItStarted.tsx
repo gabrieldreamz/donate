@@ -7,21 +7,21 @@ export default function HowItStarted() {
         giving.
       </h1>
       <p className="text-dark/80 mt-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-        molestiae odit beatae consectetur, autem ullam nulla unde modi velit.
-        Laborum harum quaerat, tempora dolor recusandae, ipsam ea animi
-        provident accusantium, dicta laboriosam sint at nisi non voluptas hic
-        voluptate unde eligendi! Sed minus tempore ullam dolore impedit natus
-        eaque itaque corrupti nihil perferendis voluptatibus incidunt, odit eos
-        quia! Quidem veniam tenetur non magni deleniti explicabo suscipit
-        similique iure, quas nihil doloremque aspernatur, est voluptas soluta
-        nostrum labore temporibus rerum fugit accusantium autem. Distinctio
-        nihil tenetur molestiae. In consequuntur quas id quibusdam nobis impedit
-        cum voluptatem vel beatae voluptatum? Nemo accusamus quam iure quidem,
-        iusto labore non commodi provident similique eaque, dolorum, aliquid
-        quisquam. Nobis veritatis quia aperiam deleniti aliquid ratione
-        pariatur, temporibus quisquam, atque quas obcaecati soluta fugit ullam
-        molestiae quae. Impedit eius voluptate
+        At Fortheppl, our vision is clear - we aspire to be catalysts for
+        positive change on a global scale. Rooted in the belief that small acts
+        of kindness can create monumental impact, Fortheppl is dedicated to
+        inspiring a worldwide transformation through the power of charitable
+        giving. Founded on the principles of compassion, collaboration, and
+        community, Fortheppl strives to make a meaningful difference in the
+        lives of those in need. We envision a world where generosity knows no
+        bounds, and where the spirit of giving transcends borders. Driven by a
+        commitment to address pressing social issues, Fortheppl channels its
+        efforts into projects that empower individuals, uplift communities, and
+        contribute to sustainable development. Whether it's providing access to
+        education, healthcare, or vital resources, our initiatives are designed
+        to create a ripple effect of positive change. Join Fortheppl on this
+        transformative journey as we work towards a future where generosity
+        becomes a universal language
       </p>
     </div>
   );
