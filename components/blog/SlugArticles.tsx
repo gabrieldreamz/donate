@@ -23,7 +23,7 @@ export default function SlugArticles() {
       <p className="text-center w-full mx-auto mb-14 md:mb-20 bg-purple-200 font-medium text-dark/70 py-[10px]">
         Every donation counts, regardless of it&apos;s size
       </p>
-      <main className="flex flex-col items-center gap-10  px-3 md:px-0">
+      <main className="flex flex-col items-center gap-10  px-3 lg:px-0">
         <div className="grid gap-4 md:gap-7">
           <Title />
           <Date />

@@ -14,9 +14,9 @@ export default function SubIntro() {
             What&apos;s Happening New
           </h1>
           <p className="text-dark/80 font-medium max-w-md text-center lg:text-start">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
-            voluptas minus
+            Stay tuned for information about upcoming events, and initiatives.
+            Join us in various campaigns to amplify our collective impact and
+            contribute to causes that matter.
           </p>
           <Link href="#" className="buttonConfig bg-blue-500">
             Join us

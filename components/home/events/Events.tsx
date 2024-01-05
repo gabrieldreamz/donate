@@ -60,9 +60,10 @@ export default function Events() {
             of yours
           </h1>
           <p className="sm:hidden text-dark/80 font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            veritatis asperiores est quae? Est error laudantium maxime? Possimus
-            amet, et itaque vel culpa hic sequi.
+            By giving of your time and resources, you become a catalyst for
+            change. Your generosity can provide access to education, healthcare,
+            and essential resources for those in need, empowering individuals
+            and communities to thrive.
           </p>
           <Link
             href=""
