@@ -23,8 +23,8 @@ export default function ContactMsg() {
 
       <div className="max-w-xs mt-14 md:mt-0 grid gap-3">
         <p className="text-sm font-medium text-dark/80">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
-          molestiae repudiandae quibusdam sed nobis assumenda?
+          Help others by using fortheppl, a platform that is safe, transparent
+          and trusted
         </p>
         <span className="text-sm font-medium text-dark/80">
           FORTHEPPL<sup>&copy;</sup> 2023
