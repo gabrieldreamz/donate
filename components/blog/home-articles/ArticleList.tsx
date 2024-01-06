@@ -21,6 +21,7 @@ export default function ArticleList() {
     <section className="flex justify-between flex-wrap max-w-[1000px] mx-auto mb-24 md:mb-32">
       {articleData.map((article) => (
         <ArticlesListCard
+          key={article.title}
           img={article.img}
           title={article.title}
           description={article.description}
