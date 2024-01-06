@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <Link href="/" className="TapHighlight">
       <p className="font-medium lg:font-semibold text-lg  text-black ">
-        ForThePpl
+        KindRipple
       </p>
     </Link>
   );

@@ -12,18 +12,18 @@ export default function Footer() {
       <div className="flex flex-col gap-3">
         <Link href="/">
           <p className="font-medium lg:font-semibold text-lg  text-blue-500 ">
-            ForThePpl
+            KindRipple
           </p>
         </Link>
         <p className="max-w-sm text-sm font-medium text-dark/80">
-          Help others by using fortheppl, a platform that is safe, transparent
+          Help others by using kindripple, a platform that is safe, transparent
           and trusted
         </p>
         <Link
           className="text-sm font-medium text-dark/80 hover:underline flex items-center gap-2"
-          href="mailto:support@fortheppl.com"
+          href="mailto:support@kindripple.com"
         >
-          <MdMail size={18} /> support@fortheppl.com
+          <MdMail size={18} /> support@kindripple.com
         </Link>
         <Link
           className="text-sm font-medium text-dark/80 hover:underline flex items-center gap-2"

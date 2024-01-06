@@ -8,10 +8,10 @@ export default function ContactMsg() {
         <div>
           <p className="text-lg font-medium">Contacts</p>
           <Link
-            href="mailto:support@hello.com"
+            href="mailto:support@kindripple.com"
             className="hover:text-blue-500 hover:underline duration-150 text-sm font-medium text-dark/80"
           >
-            support@hello.com
+            support@kindripple.com
           </Link>
         </div>
 
@@ -27,7 +27,7 @@ export default function ContactMsg() {
           and trusted
         </p>
         <span className="text-sm font-medium text-dark/80">
-          FORTHEPPL<sup>&copy;</sup> 2023
+          KINDRIPPLE<sup>&copy;</sup> 2023
         </span>
       </div>
     </section>
