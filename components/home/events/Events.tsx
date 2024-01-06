@@ -14,7 +14,8 @@ export default function Events() {
   const [eventsData, setEventsData] = useState([
     {
       id: 1,
-      title: "Clean Drinking water for kids",
+      title:
+        "Clean Drinking water for kids lkdfjdslkfjlsdajflksjflsdakjflksadjfksdjfldsjfklsdjflkfjdl",
       categorie: "Children",
       location: "Nigeria",
       img: img1,
@@ -52,7 +53,7 @@ export default function Events() {
 
   return (
     <CenterCard>
-      <section className="px-5 sm:px-10 my-32 lg:my-44">
+      <section className="px-5 sm:px-10 my-32 lg:my-44" id="featured">
         <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:justify-between">
           <h1 className="text-3xl text-dark">
             Make someones{" "}
@@ -66,7 +67,7 @@ export default function Events() {
             and communities to thrive.
           </p>
           <Link
-            href=""
+            href="/blog"
             className="btnConfig2 w-32 sm:w-24 h-12 sm:h-10 flex items-center justify-center mt-3 bg-dark text-sm whitespace-nowrap"
           >
             View all
@@ -76,6 +77,7 @@ export default function Events() {
           {eventsData.map((event) => (
             <EventCard
               key={event.id}
+              id={event.id}
               title={event.title}
               location={event.location}
               categorie={event.categorie}

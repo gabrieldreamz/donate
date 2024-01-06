@@ -18,7 +18,7 @@ export default function SubIntro() {
             Join us in various campaigns to amplify our collective impact and
             contribute to causes that matter.
           </p>
-          <Link href="#" className="buttonConfig bg-blue-500">
+          <Link href="/blog" className="buttonConfig bg-blue-500">
             Join us
           </Link>
         </div>

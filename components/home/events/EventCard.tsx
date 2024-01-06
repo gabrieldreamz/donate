@@ -10,6 +10,7 @@ interface EventRules {
   title: string;
   totalFunds: number;
   fundsRaised: number;
+  id: number;
 }
 
 export default function EventCard({
@@ -19,6 +20,7 @@ export default function EventCard({
   title,
   totalFunds,
   fundsRaised,
+  id,
 }: EventRules) {
   const fractionUnits = { minimumFractionDigits: 2, maximumFractionDigits: 2 };
   const transTotalFunds = totalFunds.toLocaleString("en-US", fractionUnits);
@@ -44,7 +46,7 @@ export default function EventCard({
           </div>
         </div>
 
-        <h1 className="font-medium text-lg">{title}</h1>
+        <h1 className="font-medium text-lg max-w-sm TxtClamp2">{title}</h1>
 
         <div>
           <p className="font-medium text-sm text-dark/75 tracking-wide">
@@ -64,7 +66,10 @@ export default function EventCard({
         </div>
 
         <div className="flex justify-end">
-          <Link href={""} className="btnConfig2 text-sm bg-green-500">
+          <Link
+            href={`/donate/${id}`}
+            className="btnConfig2 text-sm bg-green-500"
+          >
             Donate
           </Link>
         </div>

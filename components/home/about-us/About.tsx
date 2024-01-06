@@ -21,7 +21,7 @@ export default function About() {
               than 10+ years of experience. we have helped people around the
               world to live safely and in peace
             </p>
-            <Link href="" className="buttonConfig px-5 bg-blue-500">
+            <Link href="/about" className="buttonConfig px-5 bg-blue-500">
               Learn more
             </Link>
           </div>

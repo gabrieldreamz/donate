@@ -29,7 +29,7 @@ export default function IntroText() {
         </div>
       </div>
 
-      <Link href="#" className="bg-dark buttonConfig">
+      <Link href="/donate/donation-plan" className="bg-dark buttonConfig">
         Support today
       </Link>
     </div>
