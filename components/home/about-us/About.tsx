@@ -16,7 +16,7 @@ export default function About() {
             </h1>
           </div>
           <div>
-            <p className="max-w-lg text-dark/80 font-medium mb-10 mx-auto md:mx-0">
+            <p className="max-w-lg text-dark/80 tracking-wide mb-10 mx-auto md:mx-0">
               We are safe, transparent and trusted donation platform with more
               than 10+ years of experience. we have helped people around the
               world to live safely and in peace

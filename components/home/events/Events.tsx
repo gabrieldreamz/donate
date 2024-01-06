@@ -56,10 +56,10 @@ export default function Events() {
         <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:justify-between">
           <h1 className="text-3xl text-dark">
             Make someones{" "}
-            <span className="text-red-400 sm:text-dark"> Life</span> by giving
+            <span className="text-green-400 sm:text-dark"> Life</span> by giving
             of yours
           </h1>
-          <p className="sm:hidden text-dark/80 font-medium">
+          <p className="sm:hidden text-dark/80 tracking-wide">
             By giving of your time and resources, you become a catalyst for
             change. Your generosity can provide access to education, healthcare,
             and essential resources for those in need, empowering individuals

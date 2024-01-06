@@ -22,7 +22,7 @@ export default function Reviews() {
 
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">
           <span className="text-xl md:text-2xl font-medium">120</span>
-          <p className="text-sm text-dark/80">volunteers</p>
+          <p className="text-sm text-dark/80">Volunteers</p>
         </div>
 
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">

@@ -13,7 +13,7 @@ export default function SubIntro() {
           <h1 className="text-3xl lg:text-6xl lg:max-w-xs text-dark mt-24 lg:mt-0 text-center lg:text-start">
             What&apos;s Happening New
           </h1>
-          <p className="text-dark/80 font-medium max-w-md text-center lg:text-start">
+          <p className="text-dark/80 max-w-md tracking-wide text-center lg:text-start">
             Stay tuned for information about upcoming events, and initiatives.
             Join us in various campaigns to amplify our collective impact and
             contribute to causes that matter.

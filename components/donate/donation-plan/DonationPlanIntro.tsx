@@ -9,7 +9,7 @@ export default function DonationPlanIntro() {
         Every contribution counts
       </h1>
       <hr className="border border-purple-100 w-[60%]" />
-      <p className="px-3 text-dark/80 font-medium text-center max-w-5xl">
+      <p className="px-3 text-dark/80 tracking-wide text-center max-w-5xl">
         Every donation, no matter the size, is a beacon of hope and a force for
         positive change. Together, we can create a ripple effect that transforms
         lives and builds a brighter future
