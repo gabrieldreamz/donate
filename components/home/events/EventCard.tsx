@@ -24,6 +24,8 @@ export default function EventCard({
   const transTotalFunds = totalFunds.toLocaleString("en-US", fractionUnits);
   const transFundsRaised = fundsRaised.toLocaleString("en-US", fractionUnits);
 
+  const priceProgress = (fundsRaised / totalFunds) * 100;
+
   return (
     <div className="w-96 md:w-80 bg-white rounded-xl  overflow-hidden">
       <div className="h-56 md:h-44 bg-slate-300 overflow-hidden flex items-start justify-center">
@@ -53,7 +55,12 @@ export default function EventCard({
             raised of ${transTotalFunds}
             {totalFunds > 999 ? "k" : ""}
           </p>
-          <div className="w-full h-2 bg-gray-200 rounded-[2rem] mt-2"></div>
+          <div className="w-full h-2 bg-gray-200 rounded-[2rem] mt-2 overflow-hidden">
+            <div
+              className="h-2 bg-green-500 rounded-[2rem]"
+              style={{ width: priceProgress + "%" }}
+            ></div>
+          </div>
         </div>
 
         <div className="flex justify-end">

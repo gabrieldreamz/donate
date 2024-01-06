@@ -7,7 +7,7 @@ import ArticlesListCard from "./ArticleListCard";
 export default function ArticleList() {
   const [articleData, setArticleData] = useState([
     {
-      img: { img },
+      img: img,
       title: "The need for medical attention",
       description:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!",
@@ -19,54 +19,16 @@ export default function ArticleList() {
 
   return (
     <section className="flex justify-between flex-wrap max-w-[1000px] mx-auto mb-24 md:mb-32">
-      <ArticlesListCard
-        img={img}
-        title="The need for medical attention"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!"
-        date="1 Jan 2023"
-        type="Medical"
-        articleName="Gabriel Dream"
-      />
-      <ArticlesListCard
-        img={img}
-        title="The need for medical attention"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!"
-        date="1 Jan 2023"
-        type="Medical"
-        articleName="Gabriel Dream"
-      />
-      <ArticlesListCard
-        img={img}
-        title="The need for medical attention"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!"
-        date="1 Jan 2023"
-        type="Medical"
-        articleName="Gabriel Dream"
-      />
-      <ArticlesListCard
-        img={img}
-        title="The need for medical attention"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!"
-        date="1 Jan 2023"
-        type="Medical"
-        articleName="Gabriel Dream"
-      />
-      <ArticlesListCard
-        img={img}
-        title="The need for medical attention"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!"
-        date="1 Jan 2023"
-        type="Medical"
-        articleName="Gabriel Dream"
-      />
-      <ArticlesListCard
-        img={img}
-        title="The need for medical attention"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!"
-        date="1 Jan 2023"
-        type="Medical"
-        articleName="Gabriel Dream"
-      />
+      {articleData.map((article) => (
+        <ArticlesListCard
+          img={article.img}
+          title={article.title}
+          description={article.description}
+          date={article.date}
+          type={article.type}
+          articleName={article.articleName}
+        />
+      ))}
     </section>
   );
 }
