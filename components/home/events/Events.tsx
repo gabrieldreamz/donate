@@ -55,12 +55,12 @@ export default function Events() {
     <CenterCard>
       <section className="px-5 sm:px-10 my-32 lg:my-44" id="featured">
         <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:justify-between">
-          <h1 className="text-3xl text-dark">
+          <h1 className="text-3xl text-dark text-center">
             Make someones{" "}
             <span className="text-green-400 sm:text-dark"> Life</span> by giving
             of yours
           </h1>
-          <p className="sm:hidden text-dark/80 tracking-wide">
+          <p className="sm:hidden text-dark/80 tracking-wide text-center">
             By giving of your time and resources, you become a catalyst for
             change. Your generosity can provide access to education, healthcare,
             and essential resources for those in need, empowering individuals
@@ -68,7 +68,7 @@ export default function Events() {
           </p>
           <Link
             href="/blog"
-            className="btnConfig2 w-32 sm:w-24 h-12 sm:h-10 flex items-center justify-center mt-3 bg-dark text-sm whitespace-nowrap"
+            className="btnConfig2 w-32 sm:w-24 mx-auto sm:mx-0 h-12 sm:h-10 flex items-center justify-center mt-3 bg-dark text-sm whitespace-nowrap"
           >
             View all
           </Link>
