@@ -38,7 +38,6 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
           <Link
             className="tracking-wide text-dark TapHighlight block"
             href={item.link}
-            onClick={() => setToggleMenu(false)}
           >
             {item.text}
           </Link>
@@ -51,7 +50,6 @@ export default function DropDownMenu({ setToggleMenu }: DropDown) {
           animate={animationData(null).animate}
           exit={{ translateX: -20, opacity: 0.7 }}
           className="tracking-wide text-dark TapHighlight"
-          onClick={() => setToggleMenu(false)}
         >
           Volunteer
         </motion.li>
