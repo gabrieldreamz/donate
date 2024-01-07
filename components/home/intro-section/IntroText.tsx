@@ -17,14 +17,14 @@ export default function IntroText() {
         <div className="flex items-center gap-2 sm:gap-3">
           <FaCircleCheck className="text-green-500 text-xl sm:text-2xl" />
           <p className="tracking-wide text-sm sm:text-base text-dark/80 font-medium">
-            38k Volunteers
+            120 Volunteers
           </p>
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 ">
           <FaCircleCheck className="text-green-500 text-xl sm:text-2xl" />
           <p className="tracking-wide text-sm sm:text-base text-dark/80 font-medium">
-            12k Successful Events
+            1.2k Successful Events
           </p>
         </div>
       </div>

@@ -53,7 +53,7 @@ export default function Events() {
 
   return (
     <CenterCard>
-      <section className="px-5 sm:px-10 my-32 lg:my-44" id="featured">
+      <section className="px-3 sm:px-10 my-32 lg:my-44" id="featured">
         <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:justify-between">
           <h1 className="text-3xl text-dark text-center">
             Make someones{" "}
@@ -61,10 +61,9 @@ export default function Events() {
             of yours
           </h1>
           <p className="sm:hidden text-dark/80 tracking-wide text-center">
-            By giving of your time and resources, you become a catalyst for
-            change. Your generosity can provide access to education, healthcare,
-            and essential resources for those in need, empowering individuals
-            and communities to thrive.
+            Your generosity can provide access to education, healthcare, and
+            essential resources for those in need, empowering individuals and
+            communities
           </p>
           <Link
             href="/blog"

@@ -16,7 +16,7 @@ export default function Reviews() {
         </div>
 
         <div className="bg-white shadow shadow-gray-100 sm:shadow-none sm:bg-gray-100 p-3 rounded-xl">
-          <span className="text-xl md:text-2xl font-medium">180</span>
+          <span className="text-xl md:text-2xl font-medium">1.2k</span>
           <p className="text-sm text-dark/80">Projects</p>
         </div>
 

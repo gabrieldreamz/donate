@@ -25,14 +25,14 @@ export default function Trust() {
 
           <div className="flex lg:flex-col items-center gap-2 sm:hidden">
             <h1 className="text-xl sm:text-2xl tracking-wide lg:text-4xl text-blue-500 font-medium">
-              15
+              25
             </h1>
             <p className="font-medium text-sm text-white">Collaborators</p>
           </div>
 
           <div className="flex lg:flex-col items-center gap-2">
             <h1 className="text-xl sm:text-2xl tracking-wide lg:text-4xl text-blue-500 font-medium">
-              180+
+              1k+
             </h1>
             <p className="font-medium text-sm text-white">Successful Events</p>
           </div>
