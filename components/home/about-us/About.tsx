@@ -18,7 +18,7 @@ export default function About() {
           <div>
             <p className="max-w-lg text-dark/80 tracking-wide mb-10 mx-auto md:mx-0">
               We are safe, transparent and trusted donation platform with more
-              than 10+ years of experience. we have helped people around the
+              than 2+ years of experience. we have helped people around the
               world to live safely and in peace
             </p>
             <Link href="/about" className="buttonConfig px-5 bg-blue-500">

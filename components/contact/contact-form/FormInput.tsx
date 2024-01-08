@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function FormInput() {
+type FormProps = {
+  register: any;
+};
+
+export default function FormInput({ register }: FormProps) {
   return (
-    <form className="flex items-center gap-5">
+    <div className="flex items-center gap-5">
       <div className="flex flex-col gap-2 w-full">
         <label className="text-dark" htmlFor="fullname">
           Full name
@@ -12,6 +16,7 @@ export default function FormInput() {
           type="text"
           name="fullname"
           placeholder="Enter your name..."
+          {...register("Fullname")}
         />
       </div>
 
@@ -24,8 +29,9 @@ export default function FormInput() {
           type="email"
           name="email"
           placeholder="Enter your email"
+          {...register("email")}
         />
       </div>
-    </form>
+    </div>
   );
 }

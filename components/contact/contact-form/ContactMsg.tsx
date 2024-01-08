@@ -23,7 +23,7 @@ export default function ContactMsg() {
 
       <div className="max-w-xs mt-14 md:mt-0 grid gap-3">
         <p className="text-sm font-medium text-dark/80">
-          Help others by using fortheppl, a platform that is safe, transparent
+          Help others by using kindripple, a platform that is safe, transparent
           and trusted
         </p>
         <span className="text-sm font-medium text-dark/80">

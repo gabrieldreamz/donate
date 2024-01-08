@@ -69,6 +69,11 @@ body {
   background-image: url("../public/assets/images/craig-philbrick-kfxPVP_7P7U-unsplash.jpg");
 }
 
+.activeCarouselItem {
+  background-color: #0d0c22;
+  color: white;
+}
+
 /* Text clamping */
 .TxtClamp {
   display: -webkit-box;
