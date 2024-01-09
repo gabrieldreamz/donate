@@ -35,9 +35,9 @@ export function useSubscribe() {
         throw new Error("Something went wrong, try again!");
       }
 
-      setMsg("Subscribed");
+      setMsg("Thank you for joining our newsletter!");
       reset();
-      setTimeout(() => setMsg(""), 3000);
+      setTimeout(() => setMsg(""), 5000);
     } catch (error: any) {
       setServerErr(true);
       setMsg(error.message);

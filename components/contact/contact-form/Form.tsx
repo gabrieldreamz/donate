@@ -23,6 +23,10 @@ export default function Form() {
     null
   );
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [msg, setMsg] = useState("");
+  const [serverErr, setServerErr] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -30,12 +34,46 @@ export default function Form() {
     reset,
   } = useForm({ resolver: yupResolver(contactSchema) });
 
-  const handleContactSubmit = function (data: any) {
-    console.log({
-      ...data,
-      foundus: CarouselFoundUsData[selectedFoundUsValue!].text,
-      help: CarouselHelpData[selectedHelpValue!].text,
-    });
+  const handleContactSubmit = async function (data: any) {
+    try {
+      setIsLoading(true);
+      setMsg("");
+      setServerErr(false);
+      const foundus =
+        selectedFoundUsValue !== null
+          ? CarouselFoundUsData[(selectedFoundUsValue as number) - 1].text
+          : CarouselFoundUsData[CarouselFoundUsData.length - 1].text;
+
+      const help =
+        selectedHelpValue !== null
+          ? CarouselHelpData[(selectedHelpValue as number) - 1].text
+          : CarouselHelpData[CarouselHelpData.length - 1].text;
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data, foundus, help }),
+      });
+
+      if (!(res.status >= 200 && res.status < 300)) {
+        throw new Error("Something went wrong, try again!");
+      }
+
+      const reData = await res.json();
+      setMsg(reData.message);
+      setSelectedFoundUsValue(null);
+      setSelectedHelpValue(null);
+      reset();
+      console.log(reData.data);
+    } catch (error: any) {
+      console.error(error);
+      setServerErr(true);
+      setMsg(error.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   //Functions for getting the current id of the selected fields
@@ -48,7 +86,7 @@ export default function Form() {
       className="flex flex-col gap-10 sm:p-7 sm:bg-white sm:w-[500px] md:order-1 lg:order-2"
       onSubmit={handleSubmit(handleContactSubmit)}
     >
-      <FormInput register={register} />
+      <FormInput register={register} errors={errors} />
 
       <div className="flex flex-col gap-9">
         <div>
@@ -85,10 +123,19 @@ export default function Form() {
       </div>
 
       {/* We'd love to hear from you, component */}
-      <WhyContact register={register} />
+      <WhyContact
+        register={register}
+        errors={errors}
+        serverErr={serverErr}
+        msg={msg}
+      />
 
-      <div className="flex justify-end  px-5 mt-2">
-        <button className="text-center w-44 text-white rounded-[2rem] font-medium tracking-wide py-2 hover:opacity-90 active:opacity-80 duration-100 bg-blue-700 flex items-center justify-center gap-1">
+      <div className="flex justify-end items-center gap-7  px-5 mt-2">
+        {isLoading && <span className="loader" />}
+        <button
+          type="submit"
+          className="text-center w-44 text-white rounded-[2rem] font-medium tracking-wide py-2 hover:opacity-90 active:opacity-80 duration-100 bg-blue-700 flex items-center justify-center gap-1"
+        >
           Send message <IoIosShareAlt />
         </button>
       </div>

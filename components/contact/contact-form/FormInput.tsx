@@ -1,10 +1,9 @@
-import React from "react";
-
 type FormProps = {
   register: any;
+  errors: any;
 };
 
-export default function FormInput({ register }: FormProps) {
+export default function FormInput({ register, errors }: FormProps) {
   return (
     <div className="flex items-center gap-5">
       <div className="flex flex-col gap-2 w-full">
@@ -12,11 +11,13 @@ export default function FormInput({ register }: FormProps) {
           Full name
         </label>
         <input
-          className="bg-transparent border-b border-gray-300 rounded-none outline-none text-sm py-1 placeholder:text-sm placeholder:text-dark/70"
+          className={`${
+            errors.fullname ? "border-red-400" : "border-gray-300"
+          } bg-transparent border-b  rounded-none outline-none text-sm py-1 placeholder:text-sm placeholder:text-dark/70`}
           type="text"
           name="fullname"
           placeholder="Enter your name..."
-          {...register("Fullname")}
+          {...register("fullname")}
         />
       </div>
 
@@ -25,8 +26,10 @@ export default function FormInput({ register }: FormProps) {
           Email
         </label>
         <input
-          className="bg-transparent border-b border-gray-300 rounded-none outline-none text-sm py-1 placeholder:text-sm placeholder:text-dark/70"
-          type="email"
+          className={`bg-transparent border-b ${
+            errors.email ? "border-red-400" : "border-gray-300"
+          } rounded-none outline-none text-sm py-1 placeholder:text-sm placeholder:text-dark/70`}
+          type="text"
           name="email"
           placeholder="Enter your email"
           {...register("email")}

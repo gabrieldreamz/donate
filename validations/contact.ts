@@ -1,7 +1,7 @@
 import * as yup from "yup";
 
 const contactSchema = yup.object().shape({
-  Fullname: yup.string(),
+  fullname: yup.string().required("This field is missing"),
   email: yup
     .string()
     .required("Please enter your name")
