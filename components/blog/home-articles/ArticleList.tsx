@@ -10,11 +10,10 @@ export default function ArticleList() {
   const [articleData, setArticleData] = useState<any>([]);
 
   useEffect(() => {
-    const dataHandler = async () => {
+    (async () => {
       const data = await useFetch("/api/events?limit=6");
       setArticleData(data);
-    };
-    dataHandler();
+    })();
   }, []);
 
   return (
