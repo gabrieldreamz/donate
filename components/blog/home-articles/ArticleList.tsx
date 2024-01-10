@@ -7,18 +7,11 @@ import ArticlesListCard from "./ArticleListCard";
 import useFetch from "@utils/useFetch";
 
 export default function ArticleList() {
-  const [articleData, setArticleData] = useState<any>([]);
-
-  useEffect(() => {
-    (async () => {
-      const data = await useFetch("/api/events?limit=6");
-      setArticleData(data);
-    })();
-  }, []);
+  const { data, error, loading } = useFetch("/api/events?limit=6");
 
   return (
     <section className="flex justify-between flex-wrap max-w-[1000px] mx-auto mb-24 md:mb-32">
-      {articleData.map((article: any) => (
+      {data?.map((article: any) => (
         <ArticlesListCard
           key={article.id}
           id={article.id}
