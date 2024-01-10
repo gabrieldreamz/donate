@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 type ArticleCard = {
@@ -8,6 +9,7 @@ type ArticleCard = {
   type: string;
   title: string;
   description: string;
+  id: string;
 };
 
 export default function ArticlesListCard({
@@ -17,6 +19,7 @@ export default function ArticlesListCard({
   type,
   title,
   description,
+  id,
 }: ArticleCard) {
   return (
     <div className="w-[90%] lg:max-w-[480px] mx-auto lg:mx-0 mt-24 lg:mt-10">
@@ -33,19 +36,20 @@ export default function ArticlesListCard({
           </div>
         </div>
       </div>
-
-      <div className="flex justify-between mt-5 px-[1%] lg:px-[2%]">
-        <div className="flex flex-col">
-          <span className="text-sm text-green-500 font-medium">{date}</span>
-          <h1 className="text-lg mob:text-xl lg:text-2xl  font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-xl">
-            {title}
-          </h1>
-          <p className="text-sm mob:text-base text-dark/80 TxtClamp max-w-[300px] md:max-w-xl">
-            {description}
-          </p>
+      <Link href={`/blog/article/${id}`}>
+        <div className="flex justify-between mt-5 px-[1%] lg:px-[2%]">
+          <div className="flex flex-col">
+            <span className="text-sm text-green-500 font-medium">{date}</span>
+            <h1 className="text-lg mob:text-xl lg:text-2xl  font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-xl">
+              {title}
+            </h1>
+            <p className="text-sm mob:text-base text-dark/80 TxtClamp max-w-[300px] md:max-w-xl">
+              {description}
+            </p>
+          </div>
+          <MdOutlineArrowOutward className="text-xl" />
         </div>
-        <MdOutlineArrowOutward className="text-xl" />
-      </div>
+      </Link>
     </div>
   );
 }

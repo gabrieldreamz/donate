@@ -1,9 +1,15 @@
 import React from "react";
 
-export default function Date() {
+export default function Date({
+  text,
+  articleName,
+}: {
+  text: string;
+  articleName: string;
+}) {
   return (
     <span className="font-medium text-dark/80 text-center">
-      Gabriel Dream, Jan 1 2024
+      {articleName}, {text}
     </span>
   );
 }

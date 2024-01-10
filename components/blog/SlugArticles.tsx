@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Date from "./slug-articles/Date";
 import Description from "./slug-articles/Description";
@@ -9,14 +9,46 @@ import Title from "./slug-articles/Title";
 
 import img from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash.jpg";
 import Share from "./slug-articles/Share";
+import { useParams } from "next/navigation";
+
+interface dataType {
+  id?: string;
+  title?: string;
+  description?: [string];
+  date?: string;
+  type?: string;
+  articleName?: string;
+}
 
 export default function SlugArticles() {
-  const [description, setDescription] = useState([
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe voluptate ratione dolores suscipit voluptatem beatae vitae mollitia, error quidem ex! Distinctio id dolorum asperiores maxime quibusdam minima quisquam ad possimus quod! Animi, veritatis! Cum nisi excepturi mollitia itaque ipsum, molestiae, a, dolor sint aliquam voluptates necessitatibus repellendus voluptate officiis!",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe voluptate ratione dolores suscipit voluptatem beatae vitae mollitia, error quidem ex! Distinctio id dolorum asperiores maxime quibusdam minima quisquam ad possimus quod! Animi, veritatis! Cum nisi excepturi mollitia itaque ipsum, molestiae, a, dolor sint aliquam voluptates necessitatibus repellendus voluptate officiis!",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe voluptate ratione dolores suscipit voluptatem beatae vitae mollitia, error quidem ex! Distinctio id dolorum asperiores maxime quibusdam minima quisquam ad possimus quod! Animi, veritatis! Cum nisi excepturi mollitia itaque ipsum, molestiae, a, dolor sint aliquam voluptates necessitatibus repellendus voluptate officiis!",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe voluptate ratione dolores suscipit voluptatem beatae vitae mollitia, error quidem ex! Distinctio id dolorum asperiores maxime quibusdam minima quisquam ad possimus quod! Animi, veritatis! Cum nisi excepturi mollitia itaque ipsum, molestiae, a, dolor sint aliquam voluptates necessitatibus repellendus voluptate officiis!",
-  ]);
+  const params = useParams();
+  const [data, setData] = useState<dataType>({});
+
+  useEffect(() => {
+    const getSlugData = async () => {
+      const res = await fetch(`/api/events/${params.articleId}`);
+      const data = await res.json();
+
+      const transformedData = {
+        id: data.data._id,
+        title: data.data.title,
+        description: data.data.description,
+        date: new globalThis.Date(data.data.createdAt).toLocaleDateString(
+          "en-US",
+          {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }
+        ),
+        type: data.data.type,
+        articleName: data.data.articleName,
+      };
+
+      setData(transformedData);
+    };
+    getSlugData();
+  }, [params.articleId]);
 
   return (
     <>
@@ -25,12 +57,15 @@ export default function SlugArticles() {
       </p>
       <main className="flex flex-col items-center gap-10  px-3 lg:px-0">
         <div className="grid gap-4 md:gap-7">
-          <Title />
-          <Date />
+          <Title text={data.title as string} />
+          <Date
+            articleName={data.articleName as string}
+            text={data.date as string}
+          />
         </div>
         <SlugImage img={img} />
         <div className="grid gap-10">
-          <Description ArrText={description} />
+          <Description ArrText={data.description as string[]} />
           <Share />
         </div>
       </main>

@@ -1,7 +1,20 @@
+"use client";
+
 import img from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash.jpg";
 import HeroArticleCard from "./HeroArticleCard";
+import { useEffect } from "react";
 
 export default function HeroArticle() {
+  const fetchHeroArticle = async () => {
+    const res = await fetch("/api/events/12345", { cache: "no-store" });
+    const data = await res.json();
+    console.log(data.id);
+  };
+
+  useEffect(() => {
+    // fetchHeroArticle();
+  }, []);
+
   return (
     <section className="mt-20 lg:mb-10 sm:mt-32 flex justify-center">
       <HeroArticleCard

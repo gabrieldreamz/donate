@@ -38,7 +38,7 @@ export default function Intro() {
               className={`tracking-wide ${
                 errors.email || serverErr === true
                   ? "text-red-500"
-                  : "text-green-500"
+                  : "text-green-500 font-medium text-sm"
               } pl-2`}
             >
               {errors.email ? errors.email?.message : msg}

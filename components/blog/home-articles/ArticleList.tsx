@@ -1,28 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import img from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash.jpg";
 import ArticlesListCard from "./ArticleListCard";
 
+import useFetch from "@utils/useFetch";
+
 export default function ArticleList() {
-  const [articleData, setArticleData] = useState([
-    {
-      img: img,
-      title: "The need for medical attention",
-      description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, voluptatibus!",
-      date: "1 Jan 2023",
-      type: "Medical",
-      articleName: "Gabriel Dream",
-    },
-  ]);
+  const [articleData, setArticleData] = useState<any>([]);
+
+  useEffect(() => {
+    const dataHandler = async () => {
+      const data = await useFetch("/api/events?limit=6");
+      setArticleData(data);
+    };
+    dataHandler();
+  }, []);
 
   return (
     <section className="flex justify-between flex-wrap max-w-[1000px] mx-auto mb-24 md:mb-32">
-      {articleData.map((article) => (
+      {articleData.map((article: any) => (
         <ArticlesListCard
-          key={article.title}
-          img={article.img}
+          key={article.id}
+          id={article.id}
+          img={img}
           title={article.title}
           description={article.description}
           date={article.date}
