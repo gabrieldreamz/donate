@@ -7,7 +7,6 @@ export default function BlogsComponent() {
   return (
     <main>
       <Intro />
-      <HeroArticle />
       <ArticleList />
       <Volunteer />
     </main>
