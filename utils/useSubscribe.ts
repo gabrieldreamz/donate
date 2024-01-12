@@ -37,7 +37,7 @@ export function useSubscribe() {
 
       setMsg("Thank you for Subscribing to our newsletter!");
       reset();
-      setTimeout(() => setMsg(""), 5000);
+      setTimeout(() => setMsg(""), 9000);
     } catch (error: any) {
       setServerErr(true);
       setMsg(error.message);

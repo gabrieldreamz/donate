@@ -63,11 +63,10 @@ export default function Form() {
 
       const reData = await res.json();
       setMsg(reData.message);
-      setTimeout(() => setMsg(""), 5000);
+      setTimeout(() => setMsg(""), 9000);
       setSelectedFoundUsValue(null);
       setSelectedHelpValue(null);
       reset();
-      console.log(reData.data);
     } catch (error: any) {
       console.error(error);
       setServerErr(true);
