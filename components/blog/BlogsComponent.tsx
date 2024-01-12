@@ -7,7 +7,9 @@ export default function BlogsComponent() {
   return (
     <main>
       <Intro />
-      <ArticleList />
+      <div className="flex justify-center">
+        <ArticleList />
+      </div>
       <Volunteer />
     </main>
   );

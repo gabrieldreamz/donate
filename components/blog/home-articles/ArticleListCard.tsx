@@ -22,7 +22,7 @@ export default function ArticlesListCard({
   id,
 }: ArticleCard) {
   return (
-    <div className="w-[90%] lg:max-w-[480px] mx-auto lg:mx-0 mt-24 lg:mt-10">
+    <div className="w-[90%] lg:max-w-[440px] mx-auto lg:mx-0 mt-24 lg:mt-10">
       <div className="h-80 sm:h-96 lg:h-80 rounded-xl overflow-hidden relative mx-auto">
         <Image src={img} alt={title} />
         {/* Info overay */}
@@ -37,17 +37,17 @@ export default function ArticlesListCard({
         </div>
       </div>
       <Link href={`/blog/article/${id}`}>
-        <div className="flex justify-between mt-5 px-[1%] lg:px-[2%]">
+        <div className="flex justify-between mt-5 px-[1%] lg:px-[2%]  max-w-[300px] md:max-w-md">
           <div className="flex flex-col">
             <span className="text-sm text-green-500 font-medium">{date}</span>
-            <h1 className="text-lg mob:text-xl lg:text-2xl  font-medium whitespace-nowrap overflow-hidden text-ellipsis max-w-[300px] md:max-w-xl">
+            <h1 className="text-lg mob:text-xl lg:text-2xl font-medium TxtClamp2">
               {title}
             </h1>
-            <p className="text-sm mob:text-base text-dark/80 TxtClamp max-w-[300px] md:max-w-xl">
+            <p className="text-sm mob:text-base text-dark/80 TxtClamp">
               {description}
             </p>
           </div>
-          <MdOutlineArrowOutward className="text-xl" />
+          <MdOutlineArrowOutward className="text-xl flex-shrink-0" />
         </div>
       </Link>
     </div>

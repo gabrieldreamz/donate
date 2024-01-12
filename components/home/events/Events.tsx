@@ -6,8 +6,8 @@ import EventCard from "./EventCard";
 import { useState } from "react";
 
 import img1 from "@public/assets/images/Children washing hands 1_.jpg";
-import img2 from "@public/assets/images/craig-philbrick-kfxPVP_7P7U-unsplash.jpg";
-import img3 from "@public/assets/images/22_0_32_1sierra_leone_child_health_16.jpg";
+import img2 from "@public/assets/images/img10.jpg";
+import img3 from "@public/assets/images/img8.jpg";
 import img4 from "@public/assets/images/rebekah-blocker-I2jnHoIilNk-unsplash.jpg";
 
 export default function Events() {

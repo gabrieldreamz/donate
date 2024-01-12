@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import intro from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash.jpg";
+import intro from "@public/assets/images/flags-4415210_1280.png";
 
 export default function Reviews() {
   return (
     <div className="grid gap-10">
-      <div className="w-[90%] lg:w-[500px] h-96 overflow-hidden rounded-2xl mx-auto lg:mx-0">
+      <div className="w-[90%] lg:w-[500px] h-96 overflow-hidden rounded-2xl mx-auto lg:mx-0 bg-white">
         <Image src={intro} alt="A very cute girl" />
       </div>
 
