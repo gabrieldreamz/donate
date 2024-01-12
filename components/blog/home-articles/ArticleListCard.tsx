@@ -37,13 +37,13 @@ export default function ArticlesListCard({
         </div>
       </div>
       <Link href={`/blog/article/${id}`}>
-        <div className="flex justify-between mt-5 px-[1%] lg:px-[2%]  max-w-[300px] md:max-w-md">
+        <div className="flex justify-between mt-5 px-[1%] lg:px-[2%]">
           <div className="flex flex-col">
             <span className="text-sm text-green-500 font-medium">{date}</span>
-            <h1 className="text-lg mob:text-xl lg:text-2xl font-medium TxtClamp2">
+            <h1 className="text-lg mob:text-xl lg:text-2xl font-medium TxtClamp2 max-w-[300px] md:max-w-md">
               {title}
             </h1>
-            <p className="text-sm mob:text-base text-dark/80 TxtClamp">
+            <p className="text-sm mob:text-base text-dark/80 TxtClamp max-w-[300px] md:max-w-md">
               {description}
             </p>
           </div>
