@@ -14,10 +14,14 @@ import DonateSchema from "@validations/donate";
 const priceData = [25, 50, 100, 250, 500, 1000];
 
 export default function DonationComponent() {
+  const [isVisible, setIsVisible] = useState(false);
   const [carouselPrice, setCarouselPrice] = useState<number | null>(null);
   const [currentDonationPrice, setCurrentDonationPrice] = useState(0);
 
-  const setCurrentCarousel = (price: number) => setCurrentDonationPrice(price);
+  const setCurrentCarousel = (price: number) => {
+    setCurrentDonationPrice(price);
+    setIsVisible(false);
+  };
   const getCustomAmout = (amount: number) => setCurrentDonationPrice(amount);
 
   const {
@@ -52,7 +56,11 @@ export default function DonationComponent() {
             />
           ))}
         </div>
-        <CustomAmount customAmount={getCustomAmout} />
+        <CustomAmount
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+          customAmount={getCustomAmout}
+        />
 
         {/*Personal Details*/}
         <div className="mt-7 sm:mt-5">

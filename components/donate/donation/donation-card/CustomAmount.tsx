@@ -3,11 +3,13 @@ import { useState } from "react";
 
 export default function CustomAmount({
   customAmount,
+  isVisible,
+  setIsVisible,
 }: {
   customAmount: Function;
+  isVisible: boolean;
+  setIsVisible: Function;
 }) {
-  const [isVisible, setIsVisible] = useState(false);
-
   const amount = (amount: string) => {
     const parsedAmount = parseInt(amount);
     customAmount(parsedAmount);
@@ -18,7 +20,10 @@ export default function CustomAmount({
       <button
         type="button"
         className="bg-blue-500 p-2 text-white active:opacity-60 duration-150"
-        onClick={() => setIsVisible((prev) => !prev)}
+        onClick={() => {
+          amount("0");
+          setIsVisible((prev: boolean) => !prev);
+        }}
       >
         + Custom amount
       </button>

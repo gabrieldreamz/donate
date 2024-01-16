@@ -55,10 +55,9 @@ export default function Events() {
     <CenterCard>
       <section className="px-5 sm:px-10 my-32 lg:my-44" id="featured">
         <div className="flex flex-col sm:flex-row sm:items-center gap-7 sm:justify-between">
-          <h1 className="text-3xl text-dark text-center mob:px-10 md:px-0">
-            Make someones{" "}
-            <span className="text-green-400 sm:text-dark"> Life</span> by giving
-            of yours
+          <h1 className="text-3xl text-dark text-center ">
+            Enhance <span className="text-green-400 sm:text-dark"> lives</span>{" "}
+            through selflessly sharing
           </h1>
           <p className="sm:hidden text-dark/80 tracking-wide text-center">
             Your generosity can provide access to education, healthcare, and
