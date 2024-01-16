@@ -8,10 +8,10 @@ export default function ContactMsg() {
         <div>
           <p className="text-lg font-medium">Contacts</p>
           <Link
-            href="mailto:support@kindripple.com"
+            href="mailto:support@amordivina"
             className="hover:text-blue-500 hover:underline duration-150 text-sm font-medium text-dark/80"
           >
-            support@kindripple.com
+            support@amordivina
           </Link>
         </div>
 
@@ -23,11 +23,11 @@ export default function ContactMsg() {
 
       <div className="max-w-xs mt-14 md:mt-0 grid gap-3">
         <p className="text-sm font-medium text-dark/80">
-          Help others by using kindripple, a platform that is safe, transparent
+          Help others by using Amordivina, a platform that is safe, transparent
           and trusted
         </p>
         <span className="text-sm font-medium text-dark/80">
-          KINDRIPPLE<sup>&copy;</sup> 2023
+          AMORDIVINA<sup>&copy;</sup> 2023
         </span>
       </div>
     </section>

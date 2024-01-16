@@ -1,6 +1,6 @@
-export default function PersonalInfo() {
+export default function PersonalInfo({ register }: { register: any }) {
   return (
-    <form className="flex flex-col gap-3 mt-5">
+    <section className="flex flex-col gap-3 mt-5">
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="flex flex-col flex-1">
           <label
@@ -13,6 +13,7 @@ export default function PersonalInfo() {
             className="p-2 sm:p-[5px] border rounded-none outline-none"
             type="text"
             name="fullname"
+            {...register("fullname")}
           />
         </div>
         <div className="flex flex-col  flex-1">
@@ -22,6 +23,7 @@ export default function PersonalInfo() {
           <input
             className="p-2 sm:p-[5px] border rounded-none outline-none"
             type="email"
+            {...register("email")}
           />
         </div>
       </div>
@@ -35,6 +37,7 @@ export default function PersonalInfo() {
             className="p-2 sm:p-[5px] border rounded-none outline-none"
             type="text"
             name="address"
+            {...register("address")}
           />
         </div>
         <div className="flex flex-col w-16">
@@ -46,10 +49,11 @@ export default function PersonalInfo() {
           </label>
           <input
             className="p-2 sm:p-[5px] border rounded-none outline-none"
-            type="apartment"
+            type="text"
+            {...register("apt")}
           />
         </div>
       </div>
-    </form>
+    </section>
   );
 }
