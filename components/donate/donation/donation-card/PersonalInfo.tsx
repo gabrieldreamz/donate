@@ -1,27 +1,44 @@
-export default function PersonalInfo({ register }: { register: any }) {
+export default function PersonalInfo({
+  register,
+  error,
+}: {
+  register: any;
+  error: any;
+}) {
   return (
     <section className="flex flex-col gap-3 mt-5">
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="flex flex-col flex-1">
           <label
-            className="text-dark/80 text-sm font-medium"
+            className={`text-dark/80 text-sm font-medium ${
+              error.fullname && "text-red-500"
+            }`}
             htmlFor="fullname"
           >
             Full Name
           </label>
           <input
-            className="p-2 sm:p-[5px] border rounded-none outline-none"
+            className={`p-2 sm:p-[5px] border rounded-none outline-none ${
+              error.fullname && "border-red-500"
+            }`}
             type="text"
             name="fullname"
             {...register("fullname")}
           />
         </div>
         <div className="flex flex-col  flex-1">
-          <label className="text-dark/80 text-sm font-medium" htmlFor="email">
+          <label
+            className={`text-dark/80 text-sm font-medium ${
+              error.email && "text-red-500"
+            }`}
+            htmlFor="email"
+          >
             Email
           </label>
           <input
-            className="p-2 sm:p-[5px] border rounded-none outline-none"
+            className={`p-2 sm:p-[5px] border rounded-none outline-none ${
+              error.email && "border-red-500"
+            }`}
             type="email"
             {...register("email")}
           />

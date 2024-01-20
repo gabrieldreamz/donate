@@ -57,7 +57,7 @@ export default function Form() {
         },
         body: JSON.stringify({ ...data, foundus, help }),
       });
-      await sendEmail(data.email);
+      await sendEmail(data.email, "/api/emails/contact");
 
       if (!(res.status >= 200 && res.status < 300)) {
         throw new Error("Something went wrong, try again!");

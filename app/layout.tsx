@@ -6,8 +6,8 @@ import localFont from "next/font/local";
 const MonaSans = localFont({ src: "../public/fonts/Mona-Sans.woff2" });
 
 export const metadata: Metadata = {
-  title: "KindRipple",
-  description: "Donate to support the less poor",
+  title: "AmorDivina",
+  description: "Spreading love and making difference with AmorDivina",
 };
 
 export default function RootLayout({

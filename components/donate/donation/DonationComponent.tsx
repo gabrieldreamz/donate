@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
 import CustomAmount from "./donation-card/CustomAmount";
 import Options from "./donation-card/Options";
 import PersonalInfo from "./donation-card/PersonalInfo";
@@ -17,6 +19,9 @@ export default function DonationComponent() {
   const [isVisible, setIsVisible] = useState(false);
   const [carouselPrice, setCarouselPrice] = useState<number | null>(null);
   const [currentDonationPrice, setCurrentDonationPrice] = useState(0);
+  const [currentDonationPriceERR, setCurrentDonationPriceERR] = useState("");
+
+  const router = useRouter();
 
   const setCurrentCarousel = (price: number) => {
     setCurrentDonationPrice(price);
@@ -32,9 +37,31 @@ export default function DonationComponent() {
     resolver: yupResolver(DonateSchema),
   });
 
-  const handleSubmitDB = async function (data: object) {
-    console.log(currentDonationPrice);
+  const handleSubmitDB = async function (data: any) {
+    if (!currentDonationPrice || currentDonationPrice < 2)
+      return setCurrentDonationPriceERR("You cannot deposit a minimun of $2");
+
+    const res = await fetch("/api/payment/onetime-payment", {
+      method: "POST",
+      body: JSON.stringify({
+        amount: currentDonationPrice,
+        name: data.fullname,
+        email: data.email,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const resObj = await res.json();
+    router.replace(resObj.data.data.link);
   };
+
+  //checks if there's a donation price
+  useEffect(() => {
+    if (currentDonationPrice || currentDonationPrice > 2)
+      return setCurrentDonationPriceERR("");
+  }, [currentDonationPrice]);
 
   return (
     <section className="sm:h-screen flex sm:items-center sm:justify-center py-10 sm:py-0 bg-white sm:bg-gray-100">
@@ -60,12 +87,13 @@ export default function DonationComponent() {
           isVisible={isVisible}
           setIsVisible={setIsVisible}
           customAmount={getCustomAmout}
+          currentDonationPriceERR={currentDonationPriceERR}
         />
 
         {/*Personal Details*/}
         <div className="mt-7 sm:mt-5">
           <Title description="Personal Info" number={2} />
-          <PersonalInfo register={register} />
+          <PersonalInfo register={register} error={errors} />
         </div>
 
         {/*Options*/}

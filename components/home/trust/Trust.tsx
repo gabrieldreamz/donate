@@ -5,7 +5,7 @@ export default function Trust() {
     <section className="bg-dark w-full px-5 py-12 md:py-20 lg:px-8">
       <CenterCard>
         <h1 className="text-2xl lg:text-4xl max-w-sm mx-auto text-center text-white">
-          Trusted by Thousands of Volunters
+          Trusted by hundreds of Volunters
         </h1>
 
         <div className="flex  items-center justify-center gap-6 lg:gap-44 mt-14 flex-wrap">
