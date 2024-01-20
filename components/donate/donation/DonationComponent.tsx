@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import CustomAmount from "./donation-card/CustomAmount";
 import Options from "./donation-card/Options";
@@ -12,6 +12,7 @@ import Title from "./donation-card/Title";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import DonateSchema from "@validations/donate";
+import { tree } from "next/dist/build/templates/app-page";
 
 const priceData = [25, 50, 100, 250, 500, 1000];
 
@@ -21,7 +22,13 @@ export default function DonationComponent() {
   const [currentDonationPrice, setCurrentDonationPrice] = useState(0);
   const [currentDonationPriceERR, setCurrentDonationPriceERR] = useState("");
 
+  //radio buttons
+  const [isAnonymousChecked, setIsAnonymousChecked] = useState(false);
+  const [isMthDonationChecked, setIsMthDonationChecked] = useState(false);
+
+  //next navigators
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const setCurrentCarousel = (price: number) => {
     setCurrentDonationPrice(price);
@@ -37,11 +44,24 @@ export default function DonationComponent() {
     resolver: yupResolver(DonateSchema),
   });
 
+  //function for checking the type of payment
+  const checkEndPoint = () => {
+    if (isMthDonationChecked) return "/api/payment/onetime-payment";
+    if (searchParams.get("payment") === "onetime")
+      return "/api/payment/onetime-payment";
+    if (searchParams.get("payment") === "monthly")
+      return "/api/payment/subscriptions/monthly";
+    if (searchParams.get("payment") === "annaul")
+      return "/api/payment/subscriptions/yearly";
+    else return "/api/payment/onetime-payment";
+  };
+
+  //submit to db and payment function
   const handleSubmitDB = async function (data: any) {
     if (!currentDonationPrice || currentDonationPrice < 2)
-      return setCurrentDonationPriceERR("You cannot deposit a minimun of $2");
+      return setCurrentDonationPriceERR("You cannot donate a minimun of $2");
 
-    const res = await fetch("/api/payment/onetime-payment", {
+    const res = await fetch(checkEndPoint()!, {
       method: "POST",
       body: JSON.stringify({
         amount: currentDonationPrice,
@@ -62,6 +82,11 @@ export default function DonationComponent() {
     if (currentDonationPrice || currentDonationPrice > 2)
       return setCurrentDonationPriceERR("");
   }, [currentDonationPrice]);
+
+  useEffect(() => {
+    if (searchParams.get("payment") === "monthly")
+      setIsMthDonationChecked(true);
+  }, []);
 
   return (
     <section className="sm:h-screen flex sm:items-center sm:justify-center py-10 sm:py-0 bg-white sm:bg-gray-100">
@@ -97,7 +122,12 @@ export default function DonationComponent() {
         </div>
 
         {/*Options*/}
-        <Options />
+        <Options
+          isAnonymousChecked={isAnonymousChecked}
+          setIsAnonymousChecked={setIsAnonymousChecked}
+          isMthDonationChecked={isMthDonationChecked}
+          setIsMthDonationChecked={setIsMthDonationChecked}
+        />
 
         <button
           type="submit"

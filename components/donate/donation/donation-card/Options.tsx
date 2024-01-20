@@ -1,9 +1,25 @@
-export default function Options() {
+type PropsType = {
+  isAnonymousChecked: boolean;
+  setIsAnonymousChecked: Function;
+  isMthDonationChecked: boolean;
+  setIsMthDonationChecked: Function;
+};
+
+export default function Options({
+  isAnonymousChecked,
+  setIsAnonymousChecked,
+  isMthDonationChecked,
+  setIsMthDonationChecked,
+}: PropsType) {
   return (
     <div className="flex flex-col gap-3 mt-3">
       <div>
         <div className="flex gap-2 items-center">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            checked={isAnonymousChecked}
+            onChange={(e) => setIsAnonymousChecked(e.target.checked)}
+          />
           <p className="text-sm font-medium text-dark/80">
             Make this an anonymous donation
           </p>
@@ -14,7 +30,11 @@ export default function Options() {
       </div>
 
       <div className="flex gap-2 items-center">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={isMthDonationChecked}
+          onChange={(e) => setIsMthDonationChecked(e.target.checked)}
+        />
         <p className="text-sm font-medium text-dark/80">
           Make this a monthly donation
         </p>
