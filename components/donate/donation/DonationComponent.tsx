@@ -46,7 +46,7 @@ export default function DonationComponent() {
 
   //function for checking the type of payment
   const checkEndPoint = () => {
-    if (isMthDonationChecked) return "/api/payment/onetime-payment";
+    if (isMthDonationChecked) return "/api/payment/subscriptions/monthly";
     if (searchParams.get("payment") === "onetime")
       return "/api/payment/onetime-payment";
     if (searchParams.get("payment") === "monthly")
@@ -58,23 +58,41 @@ export default function DonationComponent() {
 
   //submit to db and payment function
   const handleSubmitDB = async function (data: any) {
-    if (!currentDonationPrice || currentDonationPrice < 2)
-      return setCurrentDonationPriceERR("You cannot donate a minimun of $2");
+    try {
+      if (!currentDonationPrice || currentDonationPrice < 2)
+        return setCurrentDonationPriceERR("You cannot donate a minimun of $2");
 
-    const res = await fetch(checkEndPoint()!, {
-      method: "POST",
-      body: JSON.stringify({
-        amount: currentDonationPrice,
-        name: data.fullname,
-        email: data.email,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+      const resOurs = await fetch("/api/customer-details", {
+        method: "POST",
+        body: JSON.stringify({
+          amount: currentDonationPrice,
+          fullname: data.fullname,
+          email: data.email,
+          address: data.address,
+          apt: data.apt,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-    const resObj = await res.json();
-    router.replace(resObj.data.data.link);
+      const res = await fetch(checkEndPoint()!, {
+        method: "POST",
+        body: JSON.stringify({
+          amount: currentDonationPrice,
+          name: data.fullname,
+          email: data.email,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const resObj = await res.json();
+      router.replace(resObj.data.data.link);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   //checks if there's a donation price

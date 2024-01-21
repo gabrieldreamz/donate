@@ -11,7 +11,7 @@ const configData = (amount: string, name: string, email: string) => {
       amount: amount,
       currency: "USD",
       redirect_url: "https://webhook.site/9d0b00ba-9a69-44fa-a43d-a82c33c36fdc",
-      payment_plan: 115025,
+      payment_plan: 115052,
       customer: {
         email: email,
         name: name,
