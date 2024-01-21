@@ -10,13 +10,16 @@ const configData = function (amount: string, name: string, email: string) {
       tx_ref: uuidv4(),
       amount: amount,
       currency: "USD",
-      redirect_url: "http://localhost:3000/",
+      redirect_url: "https://www.amordivina.org/",
 
       customer: {
         email: email,
         name: name,
       },
-      payment_options: "card",
+      payment_options: "account",
+      bank_transfer_options: {
+        expires: 3600,
+      },
       customizations: {
         title: "One-Time Donation",
         logo: "http://www.piedpiper.com/app/themes/joystick-v27/images/logo.png",

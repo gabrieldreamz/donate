@@ -9,19 +9,22 @@ const configData = (amount: string, name: string, email: string) => {
     json: {
       tx_ref: uuidv4(),
       amount: amount,
-      currency: "USD",
-      redirect_url: "https://webhook.site/9d0b00ba-9a69-44fa-a43d-a82c33c36fdc",
+      currency: "USD,",
+      redirect_url: "https://www.amordivina.org/",
       payment_plan: 115025,
       customer: {
         email: email,
         name: name,
       },
-      payment_options: "card, transfer",
+      payment_options: "account",
+      bank_transfer_options: {
+        expires: 3600,
+      },
       customizations: {
         title: "Amor Divina",
         logo: "http://www.piedpiper.com/app/themes/joystick-v27/images/logo.png",
       },
-      "3DSecure": true, // Enable 3-D Secure authentication
+      // "3DSecure": true, // Enable 3-D Secure authentication
     },
   };
 };

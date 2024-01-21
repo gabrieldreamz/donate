@@ -22,6 +22,8 @@ export default function DonationComponent() {
   const [currentDonationPrice, setCurrentDonationPrice] = useState(0);
   const [currentDonationPriceERR, setCurrentDonationPriceERR] = useState("");
 
+  const [isLoading, setIsLoading] = useState(false);
+
   //radio buttons
   const [isAnonymousChecked, setIsAnonymousChecked] = useState(false);
   const [isMthDonationChecked, setIsMthDonationChecked] = useState(false);
@@ -59,6 +61,7 @@ export default function DonationComponent() {
   //submit to db and payment function
   const handleSubmitDB = async function (data: any) {
     try {
+      setIsLoading(true);
       if (!currentDonationPrice || currentDonationPrice < 2)
         return setCurrentDonationPriceERR("You cannot donate a minimun of $2");
 
@@ -92,6 +95,7 @@ export default function DonationComponent() {
       router.replace(resObj.data.data.link);
     } catch (error) {
       console.error(error);
+      setIsLoading(false);
     }
   };
 
@@ -121,7 +125,9 @@ export default function DonationComponent() {
               key={price}
               onClickHandler={() => setCurrentCarousel(price)}
               className={
-                currentDonationPrice === price ? "bg-dark text-white" : ""
+                currentDonationPrice === price
+                  ? "bg-green-500 border-0 text-white"
+                  : ""
               }
             />
           ))}
@@ -149,9 +155,15 @@ export default function DonationComponent() {
 
         <button
           type="submit"
-          className="px-5 py-2 border-2 rounded-[2rem] mt-7 font-medium text-blue-500 border-blue-500 active:bg-blue-500 active:text-white duration-150"
+          className={`flex items-center justify-center px-5 py-2 border-2 rounded-[2rem] mt-7 font-medium text-blue-500 border-blue-500 ${
+            isLoading && "bg-blue-500 py-1"
+          } active:text-white duration-150`}
         >
-          Donate with Debit or Credit Card
+          {isLoading ? (
+            <span className="loader2" />
+          ) : (
+            "Donate with Debit or Credit Card"
+          )}
         </button>
       </form>
     </section>
