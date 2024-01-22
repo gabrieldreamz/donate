@@ -55,7 +55,8 @@ export default function DonationComponent() {
       return "/api/payment/subscriptions/monthly";
     if (searchParams.get("payment") === "annaul")
       return "/api/payment/subscriptions/yearly";
-    else return "/api/payment/onetime-payment";
+
+    return "/api/payment/onetime-payment";
   };
 
   //submit to db and payment function
