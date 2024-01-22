@@ -16,7 +16,7 @@ const configData = function (amount: string, name: string, email: string) {
         email: email,
         name: name,
       },
-      payment_options: "account",
+      payment_options: "card, account",
       bank_transfer_options: {
         expires: 3600,
       },
