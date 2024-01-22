@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ContactEmailTemplate = ({ fullname }: { fullname: string }) => {
+export const ContactEmailTemplate = () => {
   const containerStyle: React.CSSProperties = {
     fontFamily: "Arial, sans-serif",
     fontSize: "16px",
@@ -40,7 +40,6 @@ export const ContactEmailTemplate = ({ fullname }: { fullname: string }) => {
     <div style={containerStyle}>
       {/* <img src="logo" alt="Your Logo" style={logoStyle} /> */}
       <h1 style={headingStyle}>📬 Thank You for Contacting Amordivina</h1>
-      <p style={paragraphStyle}>Dear {fullname},</p>
 
       <p style={paragraphStyle}>
         We hope this message finds you well. 🌟 Thank you for reaching out to

@@ -12,7 +12,7 @@ export async function POST(req) {
       from: "AmorDivina <support@amordivina.org>",
       to: [email],
       subject: "Thank you for contacting us",
-      react: ContactEmailTemplate({ firstName: "John" }),
+      react: ContactEmailTemplate(),
     });
 
     return new Response({ status: 200 });
