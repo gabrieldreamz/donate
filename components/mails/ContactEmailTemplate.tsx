@@ -38,7 +38,7 @@ export const ContactEmailTemplate = ({ fullname }: { fullname: string }) => {
 
   return (
     <div style={containerStyle}>
-      <img src="logo" alt="Your Logo" style={logoStyle} />
+      {/* <img src="logo" alt="Your Logo" style={logoStyle} /> */}
       <h1 style={headingStyle}>📬 Thank You for Contacting Amordivina</h1>
       <p style={paragraphStyle}>Dear {fullname},</p>
 

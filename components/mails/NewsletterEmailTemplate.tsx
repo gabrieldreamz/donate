@@ -38,26 +38,26 @@ const NewsletterEmailTemplate = () => {
 
   return (
     <div style={containerStyle}>
-      <img src="logo" alt="AmorDivina Logo" style={logoStyle} />
+      {/* <img src="logo" alt="AmorDivina Logo" style={logoStyle} /> */}
       <h1 style={headingStyle}>🌟 Welcome to AmorDivina Insights!</h1>
 
       <p style={paragraphStyle}>
         Thanks a lot for joining our AmorDivina newsletter! By being a part of
-        it, you're saying you want to know about cool stuff and share in
+        it, you&apos;re saying you want to know about cool stuff and share in
         positive vibes.
       </p>
 
       <p style={paragraphStyle}>
-        In the next few weeks, we'll be sending you interesting things, special
-        announcements, and heartwarming stories. Your subscription makes our
-        community stronger and more vibrant.
+        In the next few weeks, we&apos;ll be sending you interesting things,
+        special announcements, and heartwarming stories. Your subscription makes
+        our community stronger and more vibrant.
       </p>
 
       <p style={paragraphStyle}>
-        At AmorDivina, we're all about spreading kindness and understanding.
-        Together, let's explore new perspectives and make the world a better
-        place. Your subscription is the start of a journey to make a positive
-        impact together.
+        At AmorDivina, we&apos;re all about spreading kindness and
+        understanding. Together, let&apos;s explore new perspectives and make
+        the world a better place. Your subscription is the start of a journey to
+        make a positive impact together.
       </p>
 
       <p style={regardsStyle}>
