@@ -11,12 +11,21 @@ export async function POST(req: Request) {
     await connectMongoDB();
 
     const emailExists = await NewsLetterEmail.findOne({ email });
-    if (emailExists) throw new Error("You are already subcribed");
+    if (emailExists)
+      return new Response(
+        JSON.stringify({
+          message: "You are already subcribed",
+        }),
+        { status: 400 }
+      );
 
     await NewsLetterEmail.create({ email });
 
     return new Response(
-      JSON.stringify({ status: 200, message: "Email Created" }),
+      JSON.stringify({
+        status: 200,
+        message: "Thank you for Subscribing to our newsletter!",
+      }),
       { status: 200 }
     );
   } catch (error: any) {

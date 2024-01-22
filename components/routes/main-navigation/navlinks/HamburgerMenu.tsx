@@ -14,7 +14,7 @@ export default function HamburgerMenu({ toggleMenu, setToggleMenu }: Menu) {
     <>
       {toggleMenu ? (
         <div
-          className="HamburgerMenuContainer"
+          className="HamburgerMenuContainer cursor-pointer"
           onClick={() => setToggleMenu(false)}
         >
           <motion.span
@@ -28,7 +28,7 @@ export default function HamburgerMenu({ toggleMenu, setToggleMenu }: Menu) {
         </div>
       ) : (
         <div
-          className="HamburgerMenuContainer"
+          className="HamburgerMenuContainer cursor-pointer"
           onClick={() => setToggleMenu(true)}
         >
           <motion.span className="HamburgerMenuItems"></motion.span>

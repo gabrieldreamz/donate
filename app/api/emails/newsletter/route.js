@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { NewsletterEmailTemplate } from "@components/mails/NewsletterEmailTemplate";
+import NewsletterEmailTemplate from "@components/mails/NewsletterEmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 

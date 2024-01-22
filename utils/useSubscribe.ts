@@ -31,13 +31,14 @@ export function useSubscribe() {
         },
         body: JSON.stringify(data),
       });
+      const resdata = await res.json();
 
       if (!(res.status >= 200 && res.status < 300)) {
-        throw new Error("Something went wrong, try again!");
+        throw new Error(resdata.message);
       }
       sendEmail(data.email, "/api/emails/newsletter");
 
-      setMsg("Thank you for Subscribing to our newsletter!");
+      setMsg(resdata.message);
       reset();
       setTimeout(() => setMsg(""), 15000);
     } catch (error: any) {
