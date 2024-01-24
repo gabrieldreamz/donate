@@ -93,7 +93,7 @@ export default function DonationComponent() {
       });
 
       const resObj = await res.json();
-      router.replace(resObj.data.data.link);
+      router.replace(resObj.data.data.authorization_url);
     } catch (error) {
       console.error(error);
       setIsLoading(false);

@@ -28,7 +28,7 @@ export default function CategoriesCard({
         >
           <Image src={image} alt={title} className="w-6 sm:w-8" />
         </div>
-        <h1 className="text-lg font-medium">{title}</h1>
+        <h1 className="text-lg sm:text-center font-medium">{title}</h1>
       </div>
       <p className="text-dark/80 sm:text-center">{description}</p>
     </div>

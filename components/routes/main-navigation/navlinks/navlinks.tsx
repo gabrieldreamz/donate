@@ -12,7 +12,7 @@ export default function Navlinks() {
         </li>
       ))}
       <li>
-        <Link href="#" className="hover:opacity-95  tracking-wide">
+        <Link href="/volunteer" className="hover:opacity-95  tracking-wide">
           Volunteer
         </Link>
       </li>
