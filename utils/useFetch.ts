@@ -18,6 +18,7 @@ const useFetch = (url: string) => {
 
         const transformedData = jsonData.data.map((item: any) => ({
           id: item._id,
+          img: item.img,
           title: item.title,
           description: item.description,
           date: new Date(item.createdAt).toLocaleDateString("en-US", {

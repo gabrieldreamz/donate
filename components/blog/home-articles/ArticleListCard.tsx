@@ -24,7 +24,13 @@ export default function ArticlesListCard({
   return (
     <div className="w-[90%] lg:max-w-[440px] mx-auto lg:mx-0 mt-24 lg:mt-10">
       <div className="h-80 sm:h-96 lg:h-80 rounded-xl overflow-hidden relative mx-auto">
-        <Image src={img} alt={title} />
+        <Image
+          src={`/assets/images/${img}`}
+          alt={title}
+          width={300}
+          height={300}
+          className="object-cover w-full h-full"
+        />
         {/* Info overay */}
         <div className="absolute w-full h-20 md:h-24 bg-gray-700/70  bottom-0 border-t border-gray-500 flex items-center">
           <div className="w-full flex justify-between px-5 text-white/90 text-sm tracking-wide">

@@ -31,7 +31,7 @@ export default function DonationPlanCard({
           <ActionsList list={list} key={i} />
         ))}
       </ul>
-      <hr className="border border-purple-100" />
+      <hr className="border border-gray-100" />
       <Description description={description} />
       <Link
         href={link}

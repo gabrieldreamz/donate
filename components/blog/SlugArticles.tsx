@@ -7,7 +7,6 @@ import Description from "./slug-articles/Description";
 import SlugImage from "./slug-articles/SlugImage";
 import Title from "./slug-articles/Title";
 
-import img from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash.jpg";
 import Share from "./slug-articles/Share";
 import { useParams } from "next/navigation";
 
@@ -18,6 +17,7 @@ interface dataType {
   date?: string;
   type?: string;
   articleName?: string;
+  img?: string;
 }
 
 export default function SlugArticles() {
@@ -31,6 +31,7 @@ export default function SlugArticles() {
 
       const transformedData = {
         id: data.data._id,
+        img: data.data.img,
         title: data.data.title,
         description: data.data.description,
         date: new globalThis.Date(data.data.createdAt).toLocaleDateString(
@@ -63,7 +64,7 @@ export default function SlugArticles() {
             text={data.date as string}
           />
         </div>
-        <SlugImage img={img} />
+        <SlugImage img={data.img ?? ""} />
         <div className="grid gap-10">
           <Description ArrText={data.description as string[]} />
           <Share />

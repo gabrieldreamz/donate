@@ -1,6 +1,5 @@
 "use client";
 
-import img from "@public/assets/images/joshua-oluwagbemiga-Jq0coU4cdFE-unsplash.jpg";
 import ArticlesListCard from "./ArticleListCard";
 
 import useFetch from "@utils/useFetch";
@@ -14,7 +13,7 @@ export default function ArticleList() {
         <ArticlesListCard
           key={article.id}
           id={article.id}
-          img={img}
+          img={article.img}
           title={article.title}
           description={article.description}
           date={article.date}

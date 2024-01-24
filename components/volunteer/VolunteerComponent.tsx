@@ -8,6 +8,7 @@ import book from "@public/assets/icons/book.png";
 import social from "@public/assets/icons/social.png";
 import CategoriesCard from "@components/home/categories/CategoriesCard";
 import VolunteerForm from "./VolunteerForm";
+import HeroComponent from "./HeroComponent";
 
 export default function VolunteerComponent() {
   const CategoriesData: {
@@ -19,29 +20,25 @@ export default function VolunteerComponent() {
     {
       image: book,
       title: "Teachers and Translators",
-      description:
-        "The assistance provided is medical facilities for various diseases",
+      description: "Join our team of educators and language enthusiasts",
       color: "green",
     },
     {
       image: medical,
       title: "Doctors and Nurses",
-      description:
-        "The assistance provided is healthy food used for cooking and eating",
+      description: "Join our team of healthcare professionals",
       color: "red",
     },
     {
       image: engineer,
       title: "Engineers and Architects",
-      description:
-        "The assistance provided is clean water for drinking, cooking and bathing",
+      description: "Join our dynamic team of problem solvers and visionaries",
       color: "blue",
     },
     {
       image: social,
       title: "Social Workers and Economists",
-      description:
-        "The assistance provided is tution fees and school development",
+      description: "Join our team of social workers and insightful economists",
       color: "purple",
     },
   ];
@@ -49,11 +46,11 @@ export default function VolunteerComponent() {
   return (
     <CenterCard>
       <section className="flex flex-col gap-3 mb-12 mt-7 md:mt-16">
-        <h1 className="text-4xl sm:text-5xl text-center 2xl:text-7xl text-dark">
+        <h1 className="text-4xl sm:text-5xl text-center 2xl:text-7xl text-dark mt-12">
           Join Our Community.
         </h1>
-        <p className="text-center mx-auto my-5 sm:my-9 rounded-3xl bg-purple-200 font-medium text-dark/80 py-[10px] px-5">
-          Let's get together and bring hope to the world
+        <p className="text-center mx-auto my-5 sm:my-9 rounded-3xl bg-blue-200 font-medium text-dark/80 py-[10px] px-5">
+          Together we can bring hope to the world
         </p>
         <p className="text-dark text-center max-w-5xl mx-auto px-5 lg:px-2">
           Are you passionate about giving back to the community and making a
@@ -74,15 +71,16 @@ export default function VolunteerComponent() {
           ))}
         </div>
 
+        <HeroComponent />
+
         <div className="mt-16 sm:mt-20 flex flex-col gap-5">
           <p className="text-blue-500 font-medium text-center">
             BECOME A VOLUNTEER
           </p>
-          <h1 className="text-4xl sm:text-5xl text-center mx-auto text-dark max-w-2xl">
+          <h1 className="text-3xl sm:text-5xl text-center mx-auto text-dark max-w-2xl">
             Join us and help bring Hope to the World.
           </h1>
         </div>
-
         <VolunteerForm />
       </section>
     </CenterCard>
