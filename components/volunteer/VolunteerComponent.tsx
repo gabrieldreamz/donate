@@ -46,7 +46,7 @@ export default function VolunteerComponent() {
   return (
     <CenterCard>
       <section className="flex flex-col gap-3 mb-12 mt-7 md:mt-16">
-        <h1 className="text-4xl sm:text-5xl text-center 2xl:text-7xl text-dark mt-12">
+        <h1 className="text-4xl sm:text-5xl text-center 2xl:text-7xl text-dark mt-7 sm:mt-12">
           Join Our Community.
         </h1>
         <p className="text-center mx-auto my-5 sm:my-9 rounded-3xl bg-blue-200 font-medium text-dark/80 py-[10px] px-5">
