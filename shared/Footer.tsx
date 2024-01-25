@@ -34,22 +34,23 @@ export default function Footer() {
 
         <ul className="flex items-center gap-3 mt-5 lg:absolute lg:right-[8%] 2xl:right-[15%]">
           <li className="p-[6px] border border-dark rounded-[50%]">
-            <Link href="https://web.facebook.com/">
+            <Link
+              target="blank"
+              href="https://www.facebook.com/profile.php?id=61555481141562&mibextid=LQQJ4d"
+            >
               <FaSquareFacebook className="text-lg text-dark" />
             </Link>
           </li>
           <li className="p-[6px] border border-dark rounded-[50%]">
-            <Link href="https://twitter.com/">
+            <Link target="blank" href="https://x.com/joinamordivina?s=11">
               <FaTwitterSquare className="text-lg text-dark" />
             </Link>
           </li>
           <li className="p-[6px] border border-dark rounded-[50%]">
-            <Link href="https://www.linkedin.com/">
-              <IoLogoLinkedin className="text-lg text-dark" />
-            </Link>
-          </li>
-          <li className="p-[6px] border border-dark rounded-[50%]">
-            <Link href="https://www.instagram.com/">
+            <Link
+              target="blank"
+              href="https://www.instagram.com/joinamordivina?igsh=dWdnNm04am5kZ24w"
+            >
               <IoLogoInstagram className="text-lg text-dark" />
             </Link>
           </li>{" "}
