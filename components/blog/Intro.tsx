@@ -1,6 +1,6 @@
 "use client";
 
-import { useSubscribe } from "@validations/utils/useSubscribe";
+import { useSubscribe } from "@utils/useSubscribe";
 
 export default function Intro() {
   const {
