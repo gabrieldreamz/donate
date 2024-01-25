@@ -13,7 +13,6 @@ import { CarouselFoundUsData, CarouselHelpData } from "../Data";
 
 import { IoIosShareAlt } from "react-icons/io";
 import contactSchema from "@validations/contact";
-import sendEmail from "@utils/SendEmail";
 
 export default function Form() {
   const [selectedFoundUsValue, setSelectedFoundUsValue] = useState<
@@ -57,7 +56,6 @@ export default function Form() {
         },
         body: JSON.stringify({ ...data, foundus, help }),
       });
-      await sendEmail(data.email, "/api/emails/contact");
 
       if (!(res.status >= 200 && res.status < 300)) {
         throw new Error("Something went wrong, try again!");

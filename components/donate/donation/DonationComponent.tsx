@@ -63,9 +63,10 @@ export default function DonationComponent() {
   const handleSubmitDB = async function (data: any) {
     try {
       setIsLoading(true);
-      if (!currentDonationPrice || currentDonationPrice < 2)
+      if (!currentDonationPrice || currentDonationPrice < 2) {
+        setIsLoading(false);
         return setCurrentDonationPriceERR("You cannot donate a minimun of $2");
-
+      }
       const resOurs = await fetch("/api/customer-details", {
         method: "POST",
         body: JSON.stringify({

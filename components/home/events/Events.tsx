@@ -3,53 +3,31 @@
 import CenterCard from "@shared/CenterCard";
 import Link from "next/link";
 import EventCard from "./EventCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import img1 from "@public/assets/images/Children washing hands 1_.jpg";
-import img2 from "@public/assets/images/img10.jpg";
-import img3 from "@public/assets/images/img8.jpg";
-import img4 from "@public/assets/images/rebekah-blocker-I2jnHoIilNk-unsplash.jpg";
+interface EventCardProps {
+  _id: string;
+  title: string;
+  location: string;
+  categorie: string;
+  img: string;
+  totalFunds: number;
+  fundsRaised: number;
+}
 
 export default function Events() {
-  const [eventsData, setEventsData] = useState([
-    {
-      id: 1,
-      title:
-        "Clean Drinking water for kids lkdfjdslkfjlsdajflksjflsdakjflksadjfksdjfldsjfklsdjflkfjdl",
-      categorie: "Children",
-      location: "Nigeria",
-      img: img1,
-      totalFunds: 5000,
-      fundsRaised: 3000,
-    },
-    {
-      id: 2,
-      title: "The need for medical attention",
-      categorie: "Medical",
-      location: "Uganda",
-      img: img2,
-      totalFunds: 1000,
-      fundsRaised: 200,
-    },
-    {
-      id: 3,
-      title: "Urgent hearth transplant",
-      categorie: "Medical",
-      location: "Mexico",
-      img: img3,
-      totalFunds: 50000,
-      fundsRaised: 35000,
-    },
-    {
-      id: 4,
-      title: "Save christmas for the kids",
-      categorie: "Children",
-      location: "Nigeria",
-      img: img4,
-      totalFunds: 3000,
-      fundsRaised: 400,
-    },
-  ]);
+  const [eventsData, setEventsData] = useState<EventCardProps[]>([]);
+
+  const fetcData = async () => {
+    const res = await fetch("/api/events?limit=4");
+
+    const data = await res.json();
+    setEventsData(data.data);
+  };
+
+  useEffect(() => {
+    fetcData();
+  }, []);
 
   return (
     <CenterCard>
@@ -72,13 +50,13 @@ export default function Events() {
           </Link>
         </div>
         <div className="flex lg:flex-row items-center justify-center gap-14  sm:gap-14 md:gap-7 flex-wrap lg:flex-nowrap mt-16">
-          {eventsData.map((event) => (
+          {eventsData.map((event: any) => (
             <EventCard
-              key={event.id}
-              id={event.id}
+              key={event._id}
+              id={event._id}
               title={event.title}
               location={event.location}
-              categorie={event.categorie}
+              categorie={event.type}
               img={event.img}
               totalFunds={event.totalFunds}
               fundsRaised={event.fundsRaised}

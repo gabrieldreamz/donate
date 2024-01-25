@@ -1,5 +1,6 @@
 import connectMongoDB from "@libs/mongodb";
 import ContactUs from "@models/Contact";
+import sendEmail from "@utils/SendEmail";
 import BackendContactSchema from "@validations/backendContactValidation";
 
 export async function POST(req: Request) {
@@ -7,15 +8,18 @@ export async function POST(req: Request) {
     const contactData = await req.json();
 
     if (!(await BackendContactSchema.isValid(contactData)))
-      return new Response(
-        JSON.stringify({ message: "You have missing fields" }),
-        {
-          status: 400,
-        }
-      );
+      return new Response(JSON.stringify({ message: "Invalid request body" }), {
+        status: 400,
+      });
 
     await connectMongoDB();
-    await ContactUs.create(contactData);
+    const createContact = await ContactUs.create(contactData);
+    console.log(createContact);
+
+    await sendEmail(
+      contactData.email,
+      "https://amordivina.org/api/emails/contact"
+    );
 
     return new Response(
       JSON.stringify({

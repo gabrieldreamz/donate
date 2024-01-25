@@ -6,7 +6,7 @@ import { MdLocationPin, MdOutlineBookmark } from "react-icons/md";
 interface EventRules {
   categorie: string;
   location: string;
-  img: StaticImageData;
+  img: string;
   title: string;
   totalFunds: number;
   fundsRaised: number;
@@ -31,7 +31,13 @@ export default function EventCard({
   return (
     <div className="w-96 md:w-80 bg-white rounded-xl  overflow-hidden">
       <div className="h-56 md:h-44 bg-slate-300 overflow-hidden flex items-start justify-center">
-        <Image src={img} alt={title} />
+        <Image
+          src={`/assets/images/${img}`}
+          alt={title}
+          width={300}
+          height={300}
+          className="object-cover w-full h-full"
+        />
       </div>
 
       <div className="p-3 rounded-xl flex flex-col gap-3">
