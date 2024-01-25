@@ -5,11 +5,13 @@ export default function VolunteerForm({
   handleSubmit,
   errors,
   isLoading,
+  successMsg,
 }: {
   register: any;
   handleSubmit: any;
   errors: any;
   isLoading: boolean;
+  successMsg: boolean;
 }) {
   return (
     <form
@@ -58,6 +60,11 @@ export default function VolunteerForm({
           <p className="text-sm text-red-500">Please enter a message</p>
         )}
       </div>
+      {successMsg && (
+        <p className="text-green-500">
+          Thank you for joining our volunteer program!
+        </p>
+      )}
 
       <button
         type="submit"

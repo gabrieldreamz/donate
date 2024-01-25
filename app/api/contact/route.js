@@ -1,9 +1,13 @@
 import connectMongoDB from "@libs/mongodb";
 import ContactUs from "@models/Contact";
-import sendEmail from "@utils/SendEmail";
 import BackendContactSchema from "@validations/backendContactValidation";
 
-export async function POST(req: Request) {
+import { ContactEmailTemplate } from "@components/mails/ContactEmailTemplate";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(req) {
   try {
     const contactData = await req.json();
 
@@ -13,13 +17,14 @@ export async function POST(req: Request) {
       });
 
     await connectMongoDB();
-    const createContact = await ContactUs.create(contactData);
-    console.log(createContact);
+    await ContactUs.create(contactData);
 
-    await sendEmail(
-      contactData.email,
-      "https://amordivina.org/api/emails/contact"
-    );
+    await resend.emails.send({
+      from: "AmorDivina <support@amordivina.org>",
+      to: [contactData.email],
+      subject: "Thank you for contacting us",
+      react: ContactEmailTemplate(),
+    });
 
     return new Response(
       JSON.stringify({
@@ -27,7 +32,7 @@ export async function POST(req: Request) {
         status: 200,
       })
     );
-  } catch (error: any) {
+  } catch (error) {
     return new Response(JSON.stringify({ message: error.message }), {
       status: 500,
     });

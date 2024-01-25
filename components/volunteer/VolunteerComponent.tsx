@@ -22,6 +22,7 @@ export default function VolunteerComponent() {
   } = useForm({ resolver: yupResolver(VolunteerSchema) });
 
   const [isLoading, setIsLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState(false);
 
   const handleSubmitToDB = async (data: any) => {
     setIsLoading(true);
@@ -33,8 +34,15 @@ export default function VolunteerComponent() {
         },
         body: JSON.stringify({ ...data, foundus: "other", help: "volunteer" }),
       });
-      const resData = await res.json();
-      console.log(resData.message);
+
+      if (!(res.status >= 200 && res.status < 300)) {
+        throw new Error("Something went wrong, try again!");
+      }
+
+      setSuccessMsg(true);
+      setTimeout(() => {
+        setSuccessMsg(false);
+      }, 10000);
       reset();
     } catch (error) {
       console.error(error);
@@ -65,6 +73,7 @@ export default function VolunteerComponent() {
           handleSubmit={handleSubmit(handleSubmitToDB)}
           errors={errors}
           isLoading={isLoading}
+          successMsg={successMsg}
         />
       </section>
     </CenterCard>
