@@ -53,9 +53,9 @@ export default function VolunteerComponent() {
 
   return (
     <CenterCard>
-      <section className="flex flex-col gap-3 mb-12 mt-7 md:mt-16">
+      <section className="flex flex-col gap-3 mb-12 mt-7 md:mt-10">
         <Intro />
-        <div className="flex items-stretch justify-center  gap-5 sm:gap-7 mt-16 sm:mt-20 flex-wrap lg:flex-nowrap px-5">
+        <div className="flex items-stretch justify-center gap-5 sm:gap-7 mt-16 sm:mt-20 flex-wrap lg:flex-nowrap px-5">
           {CategoriesData.map((cat) => (
             <CategoriesCard
               key={cat.title}
