@@ -8,10 +8,10 @@ export default function ContactMsg() {
         <div>
           <p className="text-lg font-medium">Contacts</p>
           <Link
-            href="mailto:support@amordivina"
+            href="mailto:joinamordivina@africamail.com"
             className="hover:text-blue-500 hover:underline duration-150 text-sm font-medium text-dark/80"
           >
-            support@amordivina
+            joinamordivina@africamail.com
           </Link>
         </div>
 

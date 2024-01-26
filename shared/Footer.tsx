@@ -3,7 +3,6 @@ import Link from "next/link";
 import { IoLogoInstagram, IoLogoLinkedin } from "react-icons/io";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
-import { FaPhoneVolume } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 
 export default function Footer() {
@@ -21,15 +20,9 @@ export default function Footer() {
         </p>
         <Link
           className="text-sm font-medium text-dark/80 hover:underline flex items-center gap-2"
-          href="mailto:support@amordivina"
+          href="mailto:joinamordivina@africamail.com"
         >
-          <MdMail size={18} /> support@amordivina
-        </Link>
-        <Link
-          className="text-sm font-medium text-dark/80 hover:underline flex items-center gap-2"
-          href="tel:08061695391"
-        >
-          <FaPhoneVolume size={18} /> 08061695391
+          <MdMail size={18} /> joinamordivina@africamail.com
         </Link>
 
         <ul className="flex items-center gap-3 mt-5 lg:absolute lg:right-[8%] 2xl:right-[15%]">
