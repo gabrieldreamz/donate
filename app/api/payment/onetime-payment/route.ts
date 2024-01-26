@@ -16,9 +16,6 @@ const configData = (amount: string, name: string, email: string) => {
         name: name,
       },
       payment_options: "card, account",
-      bank_transfer_options: {
-        expires: 3600,
-      },
       customizations: {
         title: "Amor Divina",
         logo: "http://www.piedpiper.com/app/themes/joystick-v27/images/logo.png",

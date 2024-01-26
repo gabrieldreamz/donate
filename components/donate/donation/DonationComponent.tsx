@@ -67,7 +67,7 @@ export default function DonationComponent() {
         setIsLoading(false);
         return setCurrentDonationPriceERR("You cannot donate a minimun of $2");
       }
-      const resOurs = await fetch("/api/customer-details", {
+      await fetch("/api/customer-details", {
         method: "POST",
         body: JSON.stringify({
           amount: currentDonationPrice,
@@ -94,7 +94,7 @@ export default function DonationComponent() {
       });
 
       const resObj = await res.json();
-      router.replace(resObj.data.data.authorization_url);
+      router.replace(resObj.data.data.link);
     } catch (error) {
       console.error(error);
       setIsLoading(false);
