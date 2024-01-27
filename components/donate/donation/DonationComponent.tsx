@@ -12,7 +12,6 @@ import Title from "./donation-card/Title";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import DonateSchema from "@validations/donate";
-import { tree } from "next/dist/build/templates/app-page";
 
 const priceData = [25, 50, 100, 250, 500, 1000];
 

@@ -6,8 +6,10 @@ import localFont from "next/font/local";
 const MonaSans = localFont({ src: "../public/fonts/Mona-Sans.woff2" });
 
 export const metadata: Metadata = {
-  title: "AmorDivina",
-  description: "Spreading love and making difference with AmorDivina",
+  title:
+    "Amor Divina: Transforming Lives through Your Generosity | Donate Today for a Brighter Future",
+  description:
+    "Join Amor Divina in spreading love and making a difference. Your generosity fuels our mission to create a brighter future. Learn more and donate today.",
 };
 
 export default function RootLayout({
