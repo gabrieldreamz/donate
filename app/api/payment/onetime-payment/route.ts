@@ -9,7 +9,7 @@ const configData = (amount: string, name: string, email: string) => {
     json: {
       tx_ref: uuidv4(),
       amount: amount,
-      currency: "USD,",
+      currency: "USD",
       redirect_url: "https://www.amordivina.org/",
       customer: {
         email: email,
