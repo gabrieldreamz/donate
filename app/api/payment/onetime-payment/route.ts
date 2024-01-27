@@ -18,7 +18,7 @@ const configData = (amount: string, name: string, email: string) => {
       payment_options: "card, account",
       customizations: {
         title: "Amor Divina",
-        logo: "http://www.piedpiper.com/app/themes/joystick-v27/images/logo.png",
+        logo: "https://res.cloudinary.com/daujtemol/image/upload/v1706354156/favicon_dwxwat.ico",
       },
       // "3DSecure": true, // Enable 3-D Secure authentication
     },
