@@ -112,7 +112,7 @@ export default function DonationComponent() {
   }, []);
 
   return (
-    <section className="my-10 flex sm:items-center sm:justify-center py-10 sm:py-0 bg-white sm:bg-gray-100">
+    <section className="sm:my-10 flex sm:items-center sm:justify-center py-10 sm:py-0 bg-white sm:bg-gray-100">
       <form
         onSubmit={handleSubmit(handleSubmitDB)}
         className="p-5 sm:p-10 sm:bg-white sm:w-fit flex flex-col gap-3"
